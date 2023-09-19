@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMDB</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- ================ START MENU ================ -->
+      <div class="header">
+        <nav>
+          <div class="navigationBar">
+            <a href="/" class="nav-logo">
+              <img src="images/logo.svg" alt="logo" width="154" height="20" />
+            </a>
+
+            <div class="nav-list-container">
+              <ul>
+                <li>
+                  <a href="/">Movies</a>
+                </li>
+
+                <li>
+                  <a href="/">TV Shows</a>
+                </li>
+
+                <li>
+                  <a href="/">People</a>
+                </li>
+
+                <li>
+                  <a href="/">More</a>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="/">
+                    <i class="menu-icons">
+                      <img src="images/plus.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <div class="box-visible">EN</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">Login</a>
+                </li>
+
+                <li>
+                  <a href="/">Join TMDB</a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <i class="menu-icons search">
+                      <img src="./images/search.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- =================== END MENU ============  -->
+
+      <!-- ============ START BANNER ============ -->
+      <header class="banner">
+        <div class="banner-contents">
+          <h2 class="banner-title">Welcome.</h2>
+          <h3 class="banner-description">
+            Millions of movies, TV shows and people to discover. Explore now.
+          </h3>
+
+          <form class="inner-search-form" action="/search" method="get">
+            <input
+              class="input-text"
+              dir="auto"
+              name="query"
+              type="text"
+              tabindex="1"
+              autoCorrect="off"
+              autofill="off"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Search for a movie, tv show, person......"
+            />
+
+            <input class="input-submit" type="submit" value="Search" />
+          </form>
+        </div>
+      </header>
+      <!-- ============= END BANNER =========== -->
+
+      <!-- ============= START CONTENT =========== -->
+
+      <div class="content">
+        <!-- ============== TRENDING ========== -->
+        <div class="movie-genre">
+          <div class="genre-title">
+            <h2 class="heading">Trending</h2>
+            <div class="selector">
+              <p class="selected">Today</p>
+              <a href="#" class="unchor"> This weeks </a>
+            </div>
+          </div>
+          <div class="list-product owl-carousel">
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ================= BANNER ======  -->
+        <div class="movie-banner">
+
+          <div class="genre-title">
+            <h2 class="heading">Latest Trailers</h2>
+            <div class="selector">
+              <p class="selected">On TV</p>
+              <a href="#" class="unchor"> In Theaters </a>
+            </div>
+          </div>
+          <div class="movie-youtube">
+            <iframe width="300" height="170" src="https://www.youtube.com/embed/h5JysJw_slw?si=5HEfwwfCf7oIDQJ1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <p class="movie-youtube--title">
+              Gia Đình Simpson
+            </p>
+            <p class="movie-youtube--des">
+              Season 35 Official Trailer
+            </p>
+          </div>
+        <div class="overlay"></div>
+
+        </div>
+
+        <!-- ============== What's Popular ========== -->
+        <div class="movie-genre">
+          <div class="genre-title">
+            <h2 class="heading">What's Popular</h2>
+            <div class="selector">
+              <p class="selected">Today</p>
+              <a href="#" class="unchor"> This weeks </a>
+            </div>
+          </div>
+          <div class="list-product owl-carousel">
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+            <div class="item-product">
+              <div class="product-item--img">
+                <img
+                  src="https://www.themoviedb.org/t/p/w220_and_h330_face/cswPVyXwQ13dFHU1KFS8dpFxIyY.jpg"
+                  alt=""
+                />
+                <div class="percent">
+                  <span class="percent-title"> 89<sup>%</sup> </span>
+                </div>
+              </div>
+              <div class="product-content">
+                <h4 class="product-title">Bọ Hung Xanh</h4>
+                <span class="product-time">Aug 16, 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- ================ BANNER 2 ============ -->
+        <div class="signup-cover">
+          <div class="signup-content">
+            <h2>Join Today</h2>
+            <div class="column-content">
+              <div class="left-column">
+                <p class="left-column--des">
+                  Get access to maintain your own <em>custom personal lists</em>,{" "}
+                  <em>track what you've seen</em> and search and filter for{" "}
+                  <em>what to watch next</em>—regardless if it's in theatres, on TV
+                  or available on popular streaming services like Netflix, Amazon
+                  Prime Video, and Jio Cinema.
+                </p>
+                <p class="signup-button">
+                  <a href="/">Sign Up</a>
+                </p>
+              </div>
+              <div class="right-column">
+                <ul>
+                  <li>Enjoy TMDb ad free</li>
+                  <li>Maintain a personal watchlist</li>
+                  <li>
+                    Filter by your subscribed streaming services and find something
+                    to watch
+                  </li>
+                  <li>Log the movies and TV shows you've seen</li>
+                  <li>Build custom lists</li>
+                  <li>Contribute to and improve our database</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+<!-- ============= LOADERBOARD ============ -->
+        <div class="leaderboard-box">
+          <div class="leaderboard-header">
+            <h2>LeaderBoard</h2>
+            <div>
+              <p class="leaderboard-header--title">
+                <span class="all-time dot"></span> All Time Edits
+              </p>
+              <p class="leaderboard-header--title">
+                <span class="this-week dot"></span> Edits This Week
+              </p>
+            </div>
+          </div>
+          <div>
+            <ul  class="leaderboard-content">
+              
+              <li class="leaderboard-content-item">
+                <span class="leaderboard-content--avatar">
+                  R
+                </span>
+                <div class="leaderboard-content--info">
+                  <h4>RuiZafon
+                  </h4>
+                  <div class="leaderboard-content--rate">
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge all"></p>
+                    <span>1009773</span>
+                    </div>
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge this_week"></p>
+                    <span>9773</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="leaderboard-content-item">
+                <span class="leaderboard-content--avatar">
+                  R
+                </span>
+                <div class="leaderboard-content--info">
+                  <h4>RuiZafon
+                  </h4>
+                  <div class="leaderboard-content--rate">
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge all"></p>
+                    <span>1009773</span>
+                    </div>
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge this_week"></p>
+                    <span>9773</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="leaderboard-content-item">
+                <span class="leaderboard-content--avatar">
+                  R
+                </span>
+                <div class="leaderboard-content--info">
+                  <h4>RuiZafon
+                  </h4>
+                  <div class="leaderboard-content--rate">
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge all"></p>
+                    <span>1009773</span>
+                    </div>
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge this_week"></p>
+                    <span>9773</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="leaderboard-content-item">
+                <span class="leaderboard-content--avatar">
+                  R
+                </span>
+                <div class="leaderboard-content--info">
+                  <h4>RuiZafon
+                  </h4>
+                  <div class="leaderboard-content--rate">
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge all"></p>
+                    <span>1009773</span>
+                    </div>
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge this_week"></p>
+                    <span>9773</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="leaderboard-content-item">
+                <span class="leaderboard-content--avatar">
+                  R
+                </span>
+                <div class="leaderboard-content--info">
+                  <h4>RuiZafon
+                  </h4>
+                  <div class="leaderboard-content--rate">
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge all"></p>
+                    <span>1009773</span>
+                    </div>
+                    <div class="leaderboard-content--meter">
+                      <p class="gauge this_week"></p>
+                    <span>9773</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      
+      </div>
+      <!-- ============= END CONTENT =========== -->
+    </div>
+  </body>
+</html>
