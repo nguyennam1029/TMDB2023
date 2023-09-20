@@ -1,0 +1,116 @@
+.content-wrapper {
+    max-width: 1220px;
+    margin: 66px auto;
+}
+.content-wrapper--heading {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+   }
+   .content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+   }
+   .performer {
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border: 1px solid rgba(227,227,227,1);
+    background-color: #fff;
+    border-radius: 4px;
+   }
+   .performer-info {
+    padding: 8px 10px;
+   }
+   .performer-info--name {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+   }
+   .performer-info--des {
+    display: block;
+ display: -webkit-box;
+ max-width: 100%;
+
+
+ font-size: 14px;
+ line-height: 1;
+ -webkit-line-clamp: 1;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis;
+   }
+
+   .pagination {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .btn {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #14425d;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn:hover {
+    background-color: #14425d;
+  }
+  .btn:hover .btn-icon {
+    stroke: #fff;
+  }
+  .btn-icon {
+    width: 24px;
+    height: 24px;
+    stroke: #14425d;
+  }
+  .page-link:link,
+  .page-link:visited {
+    text-decoration: none;
+    color: #343a40;
+    font-size: 18px;
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-link:hover,
+  .page-link:active,
+  .page-link.page-link--current {
+    text-decoration: none;
+    background-color: #14425d;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .dots {
+    color: #868e96;
+  }
+
+   @media screen and (min-width: 540px) and (max-width: 780px){ 
+    .content-wrapper {
+      
+      padding: 20px;
+  }
+    .content {
+      grid-template-columns: repeat(3, 1fr); /* Hiển thị 5 sản phẩm trên mỗi hàng */
+        gap: 22px;
+    }
+  }
+  @media (max-width: 540px) { 
+    .content-wrapper {
+      
+        padding: 20px;
+    }
+      .content {
+        grid-template-columns: repeat(2, 1fr); /* Hiển thị 5 sản phẩm trên mỗi hàng */
+        gap: 16px;
+      }
+  }

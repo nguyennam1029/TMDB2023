@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Shows</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/general.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- ================ START MENU ================ -->
+      <div class="header">
+        <nav>
+          <div class="navigationBar">
+            <a href="/" class="nav-logo">
+              <img src="images/logo.svg" alt="logo" width="154" height="20" />
+            </a>
+
+            <div class="nav-list-container">
+              <ul>
+                <li class="nav-list-container--item">
+                  <a href="/">Movies</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Now Playing</a
+                    >
+                    <a class="menu-group--link" href="./movies.html"
+                      >Upcoming</a
+                    >
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">TV Shows</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./tvShow.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Airing Today</a
+                    >
+                    <a class="menu-group--link" href="./movies.html">On TV</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">People</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">More</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Airing Today</a
+                    >
+                    <a class="menu-group--link" href="./movies.html">On TV</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="/">
+                    <i class="menu-icons">
+                      <img src="images/plus.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <div class="box-visible">EN</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">Login</a>
+                </li>
+
+                <li>
+                  <a href="/">Join TMDB</a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <i class="menu-icons search">
+                      <img src="./images/search.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- === menu mobile ===  -->
+        <div class="mobile-header">
+          <span class="mobile-header--icon menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <a href="" class="mobile-header--logo">
+            <img src="./images/logoFooter.svg" alt="" />
+          </a>
+          <div class="mobile-header--right">
+            <span class="mobile-header--icon user">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <img
+              class="mobile-header--icon search"
+              src="./images/search.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- =================== END MENU ============  -->
+
+      <!-- ===================== START CONTENT ===========  -->
+
+      <div class="content-wrapper">
+        <h2 class="content-wrapper--heading">Popular TV Shows</h2>
+
+        <div class="content">
+          <div class="filter">
+            <div class="filter-panel">
+              <span class="filter-panel--title"> Sort </span>
+              <img class="filter-panel--image" src="./images/next.svg" alt="" />
+            </div>
+            <div class="filter-panel closed">
+              <div class="filter">
+                <span class="filter-panel--title"> Filters </span>
+                <img
+                  class="filter-panel--image"
+                  src="./images/next.svg"
+                  alt=""
+                />
+              </div>
+              <div class="filter-show">
+                <h3 class="filter-show--heading">
+                  Show Me
+                  <img
+                    class="filter-show--image"
+                    src="./images/circle-question.svg"
+                    alt=""
+                  />
+                </h3>
+
+                <label class="k-form-field">
+                  <input
+                    id="show_me_everything"
+                    class="k-radio"
+                    type="radio"
+                    name="show_me"
+                    value="0"
+                    checked="checked"
+                  />
+                  <label for="show_me_everything" class="k-radio-label"
+                    >Everything</label
+                  >
+                </label>
+
+                <label class="k-form-field">
+                  <input
+                    id="show_me_not_seen"
+                    class="k-radio"
+                    type="radio"
+                    value="1"
+                    name="show_me"
+                  />
+                  <label for="show_me_not_seen" class="k-radio-label"
+                    >TV Shows I Haven't Seen</label
+                  >
+                </label>
+
+                <label class="k-form-field">
+                  <input
+                    id="show_me_seen"
+                    class="k-radio"
+                    type="radio"
+                    value="2"
+                    name="show_me"
+                  />
+                  <label for="show_me_seen" class="k-radio-label"
+                    >TV Shows I Have Seen</label
+                  >
+                </label>
+              </div>
+              <div class="filter-show">
+                <h3 class="filter-show--heading">Air Dates</h3>
+
+                <label class="k-form-field">
+                  <input
+                    id="all_releases"
+                    class="k-checkbox"
+                    type="checkbox"
+                    name="all_releases"
+                    value="true"
+                    checked=""
+                  />
+                  <label for="all_releases" class="k-checkbox-label"
+                    >Search all episodes?</label
+                  >
+                </label>
+
+                <div class="year_column">
+                  <span class="col_1 font_size_1">from</span>
+                  <div class="year-form">
+                    <input type="date">
+                   
+                  </div>
+                </div>
+
+                <div class="year_column">
+                  <span class="col_1 font_size_1">to</span>
+                  <div class="year-form">
+                    <input type="date">
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="filter-show">
+                <h3 class="filter-show--heading">Genres</h3>
+                <ul id="with_genres" class="multi_select text" name="with_genres[]">
+                    <li data-value="10759"><a class="no_click" href="/discover/tv?with_genres=10759">Action &amp; Adventure</a></li>
+                    <li data-value="10762"><a class="no_click" href="/discover/tv?with_genres=10762">Kids</a></li>
+                    <li data-value="10763"><a class="no_click" href="/discover/tv?with_genres=10763">News</a></li>
+                    <li data-value="9648"><a class="no_click" href="/discover/tv?with_genres=9648">Phim Bí Ẩn</a></li>
+                    <li data-value="18"><a class="no_click" href="/discover/tv?with_genres=18">Phim Chính Kịch</a></li>
+                    <li data-value="10751"><a class="no_click" href="/discover/tv?with_genres=10751">Phim Gia Đình</a></li>
+                    <li data-value="16"><a class="no_click" href="/discover/tv?with_genres=16">Phim Hoạt Hình</a></li>
+                    <li data-value="35"><a class="no_click" href="/discover/tv?with_genres=35">Phim Hài</a></li>
+                    <li data-value="80"><a class="no_click" href="/discover/tv?with_genres=80">Phim Hình Sự</a></li>
+                    <li data-value="37"><a class="no_click" href="/discover/tv?with_genres=37">Phim Miền Tây</a></li>
+                    <li data-value="99"><a class="no_click" href="/discover/tv?with_genres=99">Phim Tài Liệu</a></li>
+                    <li data-value="10764"><a class="no_click" href="/discover/tv?with_genres=10764">Reality</a></li>
+                    <li data-value="10765"><a class="no_click" href="/discover/tv?with_genres=10765">Sci-Fi &amp; Fantasy</a></li>
+                    <li data-value="10766"><a class="no_click" href="/discover/tv?with_genres=10766">Soap</a></li>
+                    <li data-value="10767"><a class="no_click" href="/discover/tv?with_genres=10767">Talk</a></li>
+                    <li data-value="10768"><a class="no_click" href="/discover/tv?with_genres=10768">War &amp; Politics</a></li>
+                </ul>
+              </div>
+              <div class="filter-show">
+                <h3 class="filter-show--heading">Certification</h3>
+              </div>
+              <div class="filter-show">
+                <h3 class="filter-show--heading">Network</h3>
+                <div class="year-form">
+                  <input class="year-form--Network" type="text" placeholder="Filters by TV network">
+                 
+                </div>
+              </div>
+              <div class="filter-show">
+                <h3 class="filter-show--heading">User Score</h3>
+                <div class="k-widget k-slider k-slider-horizontal full_width range k-state-default"><div class="k-slider-wrap"><ul class="k-reset k-slider-items"><li class="k-tick k-first k-tick-large" role="presentation" style="width: 11px;" title="0"><span class="k-label">0</span></li><li class="k-tick" role="presentation" style="width: 23px;" title="1">&nbsp;</li><li class="k-tick" role="presentation" style="width: 22px;" title="2">&nbsp;</li><li class="k-tick" role="presentation" style="width: 22px;" title="3">&nbsp;</li><li class="k-tick" role="presentation" style="width: 23px;" title="4">&nbsp;</li><li class="k-tick k-tick-large" role="presentation" style="width: 22px; line-height: 21.9952px;" title="5"><span class="k-label">5</span></li><li class="k-tick" role="presentation" style="width: 23px;" title="6">&nbsp;</li><li class="k-tick" role="presentation" style="width: 22px;" title="7">&nbsp;</li><li class="k-tick" role="presentation" style="width: 22px;" title="8">&nbsp;</li><li class="k-tick" role="presentation" style="width: 23px;" title="9">&nbsp;</li><li class="k-tick k-last k-tick-large" role="presentation" title="10" style="width: 12px;"><span class="k-label">10</span></li></ul><div class="k-slider-track" style="width: 224.466px;"><div class="k-slider-selection" style="width: 224.459px; left: -1px;"><!-- --></div><a href="#" class="k-draghandle" title="drag" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" tabindex="0" style="left: -7px;" data-role="draggable"></a><a href="#" class="k-draghandle" title="drag" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="10" tabindex="0" style="left: 217.459px;" data-role="draggable"></a></div><div class="k-widget k-slider k-slider-horizontal full_width range k-state-default" style="display: none;"><div class="k-slider-wrap"><div class="k-slider-track" style="width: 0px;"><div class="k-slider-selection" style="width: 0px; left: -1px;"><!-- --></div><a href="#" class="k-draghandle" title="drag" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" tabindex="0" data-role="draggable" style="left: -7px;"></a><a href="#" class="k-draghandle" title="drag" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="10" tabindex="0" style="left: -7px;" data-role="draggable"></a></div><div class="k-widget k-slider k-slider-horizontal full_width range k-state-default" style="display: none;"><div class="k-slider-wrap"><div class="k-slider-track" style="width: 0px;"><div class="k-slider-selection" style="width: 0px; left: -1px;"><!-- --></div><a href="#" class="k-draghandle" title="drag" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" tabindex="0" data-role="draggable" style="left: -7px;"></a><a href="#" class="k-draghandle" title="drag" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="10" tabindex="0" style="left: -7px;" data-role="draggable"></a></div><div id="user_score_range" class="full_width range" data-role="rangeslider" style="display: none;">
+                  <input id="vote_average_gte" name="vote_average.gte" value="0" type="text">
+                  <input id="vote_average_lte" name="vote_average.lte" value="10" type="text">
+                </div></div></div></div></div></div></div>
+              </div>
+            </div>
+
+            <div class="btn-search">Search</div>
+          </div>
+          <div class="content-right">
+            <div class="products">
+              <!-- Nội dung sản phẩm -->
+
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+              <div class="item-product">
+                <div class="product-item--img">
+                  <img
+                    src="https://www.themoviedb.org/t/p/w220_and_h330_face/zNNFg8z3z7uT817n6M0kHRcYwq1.jpg"
+                    alt=""
+                  />
+                  <div class="percent">
+                    <span class="percent-title"> 89<sup>%</sup> </span>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <h4 class="product-title">Bọ Hung Xanh</h4>
+                  <span class="product-time">Aug 16, 2023</span>
+                </div>
+              </div>
+
+              <!-- Thêm các sản phẩm khác tại đây -->
+            </div>
+            <div class="btn-loadmore">Load More</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== END CONTENT ===========  -->
+
+      <!-- ============= START FOOTER =========== -->
+
+      <footer class="footer">
+        <div class="footer-nav">
+          <div class="join-community">
+            <img src="./images/logoFooter.svg" alt="footer-logo" />
+            <a class="footer-btn" href="#!"> JOIN THE COMMUNITY </a>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">THE BASICS</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Giới thiệu về TMDB </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Contact Us </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Support Forums </a>
+              </li>
+              <li>
+                <a class="" href="#!"> API </a>
+              </li>
+              <li>
+                <a class="" href="#!"> System Status </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">GET INVOLVED</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Contribution Bible </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Add New Movie </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Add New TV Show </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">COMMUNITY</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Guidelines </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Discussions </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Leaderboard </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Twitter </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">LEGAL</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Terms of Use </a>
+              </li>
+              <li>
+                <a class="" href="#!"> API Terms of Use </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Privacy Policy </a>
+              </li>
+              <li>
+                <a class="" href="#!"> DMCA Takedown Request </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </footer>
+
+      <!-- ============= END FOOTER =========== -->
+    </div>
+  </body>
+</html>

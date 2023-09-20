@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMDB</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/people.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- ================ START MENU ================ -->
+      <div class="header">
+        <nav>
+          <div class="navigationBar">
+            <a href="/" class="nav-logo">
+              <img src="images/logo.svg" alt="logo" width="154" height="20" />
+            </a>
+
+            <div class="nav-list-container">
+              <ul>
+                <li class="nav-list-container--item">
+                  <a href="/">Movies</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Now Playing</a
+                    >
+                    <a class="menu-group--link" href="./movies.html"
+                      >Upcoming</a
+                    >
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">TV Shows</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./tvShow.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Airing Today</a
+                    >
+                    <a class="menu-group--link" href="./movies.html">On TV</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">People</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">More</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Airing Today</a
+                    >
+                    <a class="menu-group--link" href="./movies.html">On TV</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="/">
+                    <i class="menu-icons">
+                      <img src="images/plus.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <div class="box-visible">EN</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">Login</a>
+                </li>
+
+                <li>
+                  <a href="/">Join TMDB</a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <i class="menu-icons search">
+                      <img src="./images/search.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- === menu mobile ===  -->
+        <div class="mobile-header">
+          <span class="mobile-header--icon menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <a href="" class="mobile-header--logo">
+            <img src="./images/logoFooter.svg" alt="" />
+          </a>
+          <div class="mobile-header--right">
+            <span class="mobile-header--icon user">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <img
+              class="mobile-header--icon search"
+              src="./images/search.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- =================== END MENU ============  -->
+
+      <!-- ===================== START CONTENT ===========  -->
+
+      <div class="content-wrapper">
+        <h2 class="content-wrapper--heading">Popular Movies</h2>
+
+        <div class="content">
+          <div class="performer">
+            <img src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg" class="performer-image">
+            <div class="performer-info">
+                <h2 class="performer-info--name">Sae Bom</h2>
+                <span class="performer-info--des">섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span>
+            </div>
+          </div>
+          <div class="performer">
+            <img src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg" class="performer-image">
+            <div class="performer-info">
+                <h2 class="performer-info--name">Sae Bom</h2>
+                <span class="performer-info--des">섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span>
+            </div>
+          </div>
+          <div class="performer">
+            <img src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg" class="performer-image">
+            <div class="performer-info">
+                <h2 class="performer-info--name">Sae Bom</h2>
+                <span class="performer-info--des">섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span>
+            </div>
+          </div>
+          <div class="performer">
+            <img src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg" class="performer-image">
+            <div class="performer-info">
+                <h2 class="performer-info--name">Sae Bom</h2>
+                <span class="performer-info--des">섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span>
+            </div>
+          </div>
+          <div class="performer">
+            <img src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg" class="performer-image">
+            <div class="performer-info">
+                <h2 class="performer-info--name">Sae Bom</h2>
+                <span class="performer-info--des">섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span>
+            </div>
+          </div>
+          <div class="performer">
+            <img src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg" class="performer-image">
+            <div class="performer-info">
+                <h2 class="performer-info--name">Sae Bom</h2>
+                <span class="performer-info--des">섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span>
+            </div>
+          </div>
+          <div class="performer">
+            <img src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg" class="performer-image">
+            <div class="performer-info">
+                <h2 class="performer-info--name">Sae Bom</h2>
+                <span class="performer-info--des">섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span>
+            </div>
+          </div>
+          <div class="performer">
+            <img src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg" class="performer-image">
+            <div class="performer-info">
+                <h2 class="performer-info--name">Sae Bom</h2>
+                <span class="performer-info--des">섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="btn-icon btn--left"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 19.5L8.25 12l7.5-7.5"
+                />
+              </svg>
+            </button>
+            <a href="#" class="page-link">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link page-link--current">3</a>
+            <a href="#" class="page-link">4</a>
+            <a href="#" class="page-link">5</a>
+            <a href="#" class="page-link">6</a>
+            <span class="dots">...</span>
+            <a href="#" class="page-link">23</a>
+            <button class="btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="btn-icon btn--right"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                />
+              </svg>
+            </button>
+          </div>
+      </div>
+
+      <!-- ===================== END CONTENT ===========  -->
+
+      <!-- ============= START FOOTER =========== -->
+
+      <footer class="footer">
+        <div class="footer-nav">
+          <div class="join-community">
+            <img src="./images/logoFooter.svg" alt="footer-logo" />
+            <a class="footer-btn" href="#!"> JOIN THE COMMUNITY </a>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">THE BASICS</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Giới thiệu về TMDB </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Contact Us </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Support Forums </a>
+              </li>
+              <li>
+                <a class="" href="#!"> API </a>
+              </li>
+              <li>
+                <a class="" href="#!"> System Status </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">GET INVOLVED</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Contribution Bible </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Add New Movie </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Add New TV Show </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">COMMUNITY</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Guidelines </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Discussions </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Leaderboard </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Twitter </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">LEGAL</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Terms of Use </a>
+              </li>
+              <li>
+                <a class="" href="#!"> API Terms of Use </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Privacy Policy </a>
+              </li>
+              <li>
+                <a class="" href="#!"> DMCA Takedown Request </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+      </footer>
+
+      <!-- ============= END FOOTER =========== -->
+    </div>
+  </body>
+</html>
