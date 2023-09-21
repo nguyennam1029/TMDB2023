@@ -1,0 +1,500 @@
+.shortcut-bar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 66px;
+    height: 46px;
+    gap: 40px;
+}
+.shortcut-bar--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: #000;
+}
+.shortcut-bar--icon {
+    width: 16px;
+    height: 16px;
+}
+
+
+ .movie-detail {
+    width                    : 100%;
+     z-index               : 1;
+
+    position                 : relative;
+    background-size          : cover;
+    background-repeat        : no-repeat;
+    height                   : 510px;
+    background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/iiXliCeykkzmJ0Eg9RYJ7F2CWSz.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.movie-detail--overlay {
+
+    position        : absolute;
+    top             : 0;
+    right           : 0;
+    bottom          : 0;
+    left            : 0;
+    background-image: linear-gradient(to right, rgb(67, 67, 67) 150px, rgba(31.5, 31.5, 31.5, 0.54) 100%);
+    z-index: 1;
+
+}
+.movie-header {
+    position: relative;
+    z-index        : 2;
+    height         : 100%;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    max-width: 1220px;
+    margin: 0 auto;
+    align-items: center;
+}
+.poster-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+.poster-title h2 {
+    font-size  : 34px;
+    color      : #fff;
+    font-weight: 700;
+}
+
+.poster-title span {
+    font-size  : 33px;
+    color      : #fff;
+    font-weight: 400;
+    opacity    : 0.8;
+}
+.poster-facts {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap      : 4px;
+    color: #fff;
+    margin: 10px 0;
+}
+
+.poster-facts span {
+    margin-right: 6px;
+}
+.poster-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #fff;
+}
+.certification {
+
+    display      : inline-flex;
+    white-space  : nowrap;
+    align-items  : center;
+    align-content: center;
+    padding      : 2px 4px;
+
+    color        : rgba(0, 0, 0, 0.6);
+    line-height  : 1;
+    border-radius: 2px;
+    margin-right : 7px;
+    border       : 1px solid rgba(255, 255, 255, 0.6);
+    color        : rgba(255, 255, 255, 0.6);
+
+}
+.poster-facts--relative {
+    position   : relative;
+    margin-left: 6px;
+}
+
+.poster-facts--relative::before {
+    content : "";
+    top     : 50%;
+    position: absolute;
+
+    left                 : -8px;
+    width                : 4px;
+    height               : 4px;
+    background-color     : #fff;
+    border-radius        : 50%;
+    -webkit-border-radius: 50%;
+}
+.chart {
+    display: flex;
+    align-items: center;
+}
+.chart-content {
+    position        : relative;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 60px;
+    height          : 60px;
+    background-color: #000;
+    border-radius   : 50%;
+
+}
+
+.chart-content::before {
+    content      : "";
+    width        : 100%;
+    height       : 100%;
+    border       : 3px solid #21d07a;
+    position     : absolute;
+    top          : 0;
+    left         : 0;
+    background   : transparent;
+    border-radius: 50%;
+}
+.chart-content--score {
+    font-size  : 20px;
+    font-weight: 900;
+}
+
+.chart-content--score > sup {
+    font-size  : 12px;
+    font-weight: 400;
+}
+.chart-title {
+    font-size  : 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-left: 6px;
+  
+}
+.poster-item {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.poster-item--link:hover {
+    color             : #d6d6d6 !important;
+    transition        : .2s ease;
+    -webkit-transition: .2s ease;
+    -moz-transition   : .2s ease;
+    -ms-transition    : .2s ease;
+    -o-transition     : .2s ease;
+}
+
+.poster-item--link.bg {
+    background: rgba(3,
+            37,
+            65, 1);
+    border-radius  : 50%;
+    width          : 46px;
+    height         : 46px;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    font-size      : 1.6rem;
+}
+.poster-item--link > img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}
+.poster-item--video {
+    font-size  : 1.6rem;
+    font-weight: 700;
+}
+
+.poster-item--video:hover {
+    color: #d6d6d6;
+}
+
+.header-info {
+    color: #fff;
+}
+.tagline {
+  
+    color    : rgb(171, 171, 171);
+    margin   : 12px 0;
+}
+
+.overview-lable {
+    font-size  : 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.overview span {
+   color: #f1f1f1;
+   font-size: 14px;
+   line-height: 18px;
+}
+.people-poster {
+    margin-top: 30px ;
+    color: #f1f1f1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.people-poster--profile > a {
+    font-size: 16px;
+    font-weight: 500;
+    color: #f1f1f1;
+
+}
+.people-poster--profile > p {
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.content {
+    max-width: 1220px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 260px;
+    gap: 30px;
+}
+.content-left--heading{
+    font-size: 21px;
+    font-weight: 600;
+}
+.content-left--heading.sm {
+    font-size: 16px;
+
+}
+.scroll-people {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    gap: 16px;
+    overflow-x: scroll;
+    padding-bottom: 20px;
+  }
+.performer {
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    border: 1px solid rgba(227,227,227,1);
+    background-color: #fff;
+    border-radius: 4px;
+    width: 138px;
+   }
+   .performer-info {
+    padding: 8px 10px;
+   }
+   .performer-info--name {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 6px;
+   }
+   .performer-info--des {
+    display: block;
+ display: -webkit-box;
+ max-width: 100%;
+
+
+ font-size: 14px;
+ line-height: 1;
+ -webkit-line-clamp: 1;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+ text-overflow: ellipsis;
+   }
+.content-right {
+    width: 260px;
+}
+.panel {
+padding: 24px 0;
+margin: 20px 0;
+border-top: 1px solid #cdcdcd;
+/* border-bottom: 1px solid #cdcdcd; */
+}
+.tab {
+    
+  }
+  .tab-list {
+    display: flex;
+    gap: 50px;
+ 
+    border-radius: 6px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+  .tab-item {
+   
+    text-align: center;
+    padding: 6px 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    width: fit-content;
+    
+  }
+  .tab-item.title {
+    font-size: 20px !important;
+    font-weight: 600;
+  }
+  .tab-item:hover {
+    background-color: #fafafa;
+  }
+  .tab-item.is-active {
+    color: rgb(0, 0, 0);
+    border-bottom:4px solid #000;
+  }
+  .tab-content {
+    line-height: 18px;
+    color: #4e4e4e;
+  }
+  .tab-content--image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+
+    filter: brightness(0.7);
+  }
+  .collection {
+    background-image: linear-gradient(to right, rgba( 3,37,65,1) 0%, rgba( 3,37,65,0.6) 100%), url("https://www.themoviedb.org/t/p/w1440_and_h320_multi_faces/z5A5W3WYJc3UVEWljSGwdjDgQ0j.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 256px;
+    border-radius: 8px;
+  }
+  .collection-header {
+    padding-left: 20px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    color: #f1f1f1;
+  }
+  .collection-header > h3 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .collection-header > p {
+    margin: 8px 0;
+    line-height: 20px;
+  }
+  .collection-header > a {
+   display: flex;
+margin-top: 10px;
+   width: fit-content;
+   justify-content: center;
+   align-items: center;
+   padding: 14px 20px;
+   border-radius: 20px;
+   background-color: #000;
+   font-weight: 600;
+   color: #f1f1f1;
+  }
+
+  .social-list {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .social-link > img {
+    width: 30px;
+    height: 30px;
+  }
+  .info-movie {
+    margin: 30px 0;
+  }
+  .info-movie-item {
+    margin: 20px 0;
+
+  }
+  .info-movie-item--heading {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .info-movie-item > span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .keywords {
+    margin-bottom: 40px;
+  }
+.keyword-heading {
+    font-size: 18px;
+    font-weight: 600;
+}
+.keywords-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d7d7d7;
+}
+.keywords-content > a {
+    background-color: rgba(0,0,0,.1);
+    border: 1px solid #d7d7d7;
+    color: #5b5b5b;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.content-score-wrapper {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+.content-score-wrapper--score {
+    padding: 12px;
+    background-color: #000;
+    color: #f1f1f1;
+    font-weight: 600;
+}
+.content-score-wrapper--des {
+    padding: 12px;
+    background-color: #d9d9d9;
+    color: #000;
+    font-size: 14px;
+}
+.leaderboard {
+    margin: 30px 0;
+
+}
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+}
+.leaderboard-item > img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100rem;
+}
+.leaderboard-item--info {
+    font-weight: 600;
+   
+}
+
+.leaderboard-item--info > span {
+    font-weight: 400;
+    color: #4c4c4c;
+}
+.trend {
+    margin: 30px 0;
+}
+.trend-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    width: fit-content;
+    background-color: #000;
+    color: #d6d6d6;
+}
+.trend-btn > img {
+    width: 16px;
+    height: 16px;
+    filter: brightness(0) invert(1);
+}

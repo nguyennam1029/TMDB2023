@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Page</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/detail.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- ================ START MENU ================ -->
+      <div class="header">
+        <nav>
+          <div class="navigationBar">
+            <a href="/" class="nav-logo">
+              <img src="images/logo.svg" alt="logo" width="154" height="20" />
+            </a>
+
+            <div class="nav-list-container">
+              <ul>
+                <li class="nav-list-container--item">
+                  <a href="/">Movies</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Now Playing</a
+                    >
+                    <a class="menu-group--link" href="./movies.html"
+                      >Upcoming</a
+                    >
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">TV Shows</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./tvShow.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Airing Today</a
+                    >
+                    <a class="menu-group--link" href="./movies.html">On TV</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">People</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">More</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Airing Today</a
+                    >
+                    <a class="menu-group--link" href="./movies.html">On TV</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="/">
+                    <i class="menu-icons">
+                      <img src="images/plus.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <div class="box-visible">EN</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">Login</a>
+                </li>
+
+                <li>
+                  <a href="/">Join TMDB</a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <i class="menu-icons search">
+                      <img src="./images/search.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- === menu mobile ===  -->
+        <div class="mobile-header">
+          <span class="mobile-header--icon menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <a href="" class="mobile-header--logo">
+            <img src="./images/logoFooter.svg" alt="" />
+          </a>
+          <div class="mobile-header--right">
+            <span class="mobile-header--icon user">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <img
+              class="mobile-header--icon search"
+              src="./images/search.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- =================== END MENU ============  -->
+
+      <!-- ===================== START CONTENT ===========  -->
+
+      <div class="content-wrapper">
+        <div class="shortcut-bar-wrapper">
+          <div class="shortcut-bar--item">
+            <a href="#" class="shortcut-bar--link">
+              Overview
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                class="shortcut-bar--icon"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="shortcut-bar--item">
+            <a href="#" class="shortcut-bar--link">
+              Media
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                class="shortcut-bar--icon"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="shortcut-bar--item">
+            <a href="#" class="shortcut-bar--link">
+              Random
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                class="shortcut-bar--icon"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+          <div class="shortcut-bar--item">
+            <a href="#" class="shortcut-bar--link">
+              Shared
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                class="shortcut-bar--icon"
+                fill="currentColor"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="movie-detail">
+          <div class="movie-detail--overlay"></div>
+          <div class="movie-header">
+            <div class="movie-header--poster">
+              <img
+                src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3aJvYn7PBMBOYkZdD2Rc0gn1Lxd.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="poster-info">
+              <div class="poster-title">
+                <h2>Trừng Phạt</h2>
+                <span>(2022)</span>
+              </div>
+
+              <div class="poster-facts">
+                <span class="certification">PG - 13</span>
+                <span class="date">08/25/2023 (US) </span>
+                <span class="category poster-facts--relative">
+                  Phim Hành Động, Phim Bí Ẩn, Phim Gây Cấn, Phim Hình Sự
+                </span>
+                <span class="runtime poster-facts--relative"> 1h24m </span>
+              </div>
+
+              <div>
+                <ul class="poster-actions">
+                  <li class="chart">
+                    <div class="chart-content">
+                      <span class="chart-content--score"> 89<sup>%</sup> </span>
+                    </div>
+                    <p class="chart-title">
+                      User <br />
+                      Score
+                    </p>
+                  </li>
+                  <li class="poster-item">
+                    <a href="#" class="poster-item--link bg">
+                      <img
+                        src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-159-thumbnails-list-white-c260ea972eebf812289fd3c41d0d2c1dff33ecbcd62be13fba8eeaf9de173789.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li class="poster-item">
+                    <a href="#" class="poster-item--link bg">
+                      <img
+                        src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-13-heart-white-28d2cc2d6418c5047efcfd2438bfc5d109192671263c270993c05f130cc4584e.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li class="poster-item">
+                    <a href="#" class="poster-item--link bg">
+                      <img
+                        src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-73-bookmark-white-432e98d550b7e4c80b06272c49475b0db85a60f6fae450420713004b3c9d3ffd.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li class="poster-item">
+                    <a href="#" class="poster-item--link bg">
+                      <img
+                        src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-49-star-white-5c85220678b312aea9599d5f12ad858a9e7df226de51ef8b6b699023ffeda5fa.svg"
+                        alt=""
+                      />
+                    </a>
+                  </li>
+                  <li class="poster-item">
+                    <a href="#" class="poster-item--link">
+                      <img
+                        src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-175-play-806cb05551791b8dedd7f8d38fd3bd806e2d397fcfeaa00a5cc9129f0819fd07.svg"
+                        alt=""
+                      />
+                    </a>
+                    Play Trailer
+                  </li>
+                </ul>
+              </div>
+
+              <div class="header-info">
+                <h3 class="tagline">selectItem tagline</h3>
+                <div class="overview">
+                  <p class="overview-lable">Overview</p>
+                  <span>
+                    Matt Turner (Liam Neeson) là một doanh nhân người Mỹ thành
+                    đạt sống ở Berlin, đang phải cân bằng giữa sự nghiệp tài
+                    chính đang bùng nổ và trách nhiệm gia đình. Một buổi sáng
+                    đang lái xe đưa con đến trường, Matt nhận được một cuộc điện
+                    thoại từ một giọng nói bí ẩn: có một quả bom dưới ghế của
+                    anh ấy sẽ phát nổ trừ khi anh ấy hoàn thành một loạt nhiệm
+                    vụ cụ thể, và nhanh chóng. Bị mắc kẹt trong một cuộc rượt
+                    đuổi tốc độ cao khắp thành phố, Matt phải làm theo chỉ dẫn
+                    ngày càng nguy hiểm của “kẻ lạ mặt” trong cuộc chạy đua với
+                    thời gian để bảo vệ gia đình và tìm lời giải đáp cho những
+                    bí ẩn đang diễn ra. Bộ phim ly kỳ về chiếc đồng hồ tích tắc
+                    nhập vai này của các nhà sản xuất phim NON-STOP và THE
+                    COMMUTER thu hút khán giả tham gia vào một hành trình cứu
+                    chuộc và trả thù có chỉ số octan cao.
+                  </span>
+                </div>
+                <div class="people-poster">
+                  <div class="people-poster--profile">
+                    <a href="/person/41671-nimrod-antal">Nimród Antal</a>
+                    <p class="character">Director</p>
+                  </div>
+                  <div class="people-poster--profile">
+                    <a href="/person/41671-nimrod-antal">Nimród Antal</a>
+                    <p class="character">Director</p>
+                  </div>
+                  <div class="people-poster--profile">
+                    <a href="/person/41671-nimrod-antal">Nimród Antal</a>
+                    <p class="character">Director</p>
+                  </div>
+                  <div class="people-poster--profile">
+                    <a href="/person/41671-nimrod-antal">Nimród Antal</a>
+                    <p class="character">Director</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <div class="content-left">
+            <h2 class="content-left--heading">Top Billed Cast</h2>
+            <div class="scroll-people">
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+            </div>
+            <h2 class="content-left--heading sm">Full Cast & Crew</h2>
+            <div class="panel socal-panel">
+              <div class="tab">
+                <div class="tab-list">
+                  <div class="tab-item title">Socal</div>
+                  <div class="tab-item is-active">Reviews</div>
+                  <div class="tab-item">Discussions</div>
+                </div>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam, aspernatur animi asperiores repudiandae officiis
+                  molestiae! Neque atque quibusdam eum eos culpa animi similique
+                  dolores ea maxime assumenda delectus, in expedita?
+                </div>
+              </div>
+            </div>
+
+            <div class="panel socal-panel">
+              <div class="tab">
+                <div class="tab-list">
+                  <div class="tab-item title">Media</div>
+                  <div class="tab-item is-active">Most Popular</div>
+                  <div class="tab-item">Videos 0</div>
+                  <div class="tab-item">Backdrops 31</div>
+                  <div class="tab-item">Posters 173</div>
+                </div>
+                <div class="tab-content">
+                  <img
+                    class="tab-content--image"
+                    src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/iiXliCeykkzmJ0Eg9RYJ7F2CWSz.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="collection">
+                <div class="collection-header">
+                  <h3>Part of the Loạt phim Fast & Furious</h3>
+                  <p>
+                    Includes Fast & Furious, Fast & Furious 2, Fast & Furious 3:
+                    Đường Đua Tokyo, Fast & Furious 4, Fast & Furious 5: Phi Vụ
+                    Rio, and Fast & Furious 6
+                  </p>
+                  <a href="#">VIEW THE COLLECTION</a>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="content-left--heading sm">Recommendations</h2>
+            <div class="scroll-people">
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-right">
+            <div class="social-list">
+              <a class="social-link" href="#">
+                <img
+                  src="https://www.themoviedb.org/assets/2/v4/glyphicons/social/facebook-2c5718e4ece8eb3a3cc49ae97000e541c0aad50869b419b5aa579693bc0ad059.svg"
+                  alt=""
+                />
+              </a>
+              <a class="social-link" href="#">
+                <img
+                  src="https://www.themoviedb.org/assets/2/v4/glyphicons/social/twitter-a6ff8c172b8e086f4a64578cee0a16676c1a067b47a1b1b186d58795d241a852.svg"
+                  alt=""
+                />
+              </a>
+              <a class="social-link" href="#">
+                <img
+                  src="https://www.themoviedb.org/assets/2/v4/glyphicons/social/instagram-74e6299c864adc384258da3b3a8eb09282b7ccda4dd1dfa9a4158ba2ea8583b9.svg"
+                  alt=""
+                />
+              </a>
+              <a class="social-link" href="#">
+                <img
+                  src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-351-link-5f643a86c2515cb06ea08ebc798941824f76bbcea4ed571222a81f271b30c7f3.svg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="info-movie">
+              <div class="info-movie-item">
+                <h4 class="info-movie-item--heading">Original Title</h4>
+                <span> Fast X </span>
+              </div>
+
+              <div class="info-movie-item">
+                <h4 class="info-movie-item--heading">Status</h4>
+                <span> Released </span>
+              </div>
+              <div class="info-movie-item">
+                <h4 class="info-movie-item--heading">Original Language</h4>
+                <span> Tiếng Anh </span>
+              </div>
+              <div class="info-movie-item">
+                <h4 class="info-movie-item--heading">Budget</h4>
+                <span> $340,000,000.00 </span>
+              </div>
+              <div class="info-movie-item">
+                <h4 class="info-movie-item--heading">Revenue</h4>
+                <span> $704,709,660.00 </span>
+              </div>
+            </div>
+            <div class="keywords">
+              <h4 class="keyword-heading">Keywords</h4>
+              <div class="keywords-content">
+                <a href="#"> sequel</a>
+                <a href="#">revenge</a>
+                <a href="#">racing</a>
+                <a href="#">family</a>
+                <a href="#">cliffhanger</a>
+                <a href="#">cars</a>
+              </div>
+            </div>
+            <div class="content-score">
+              <h4 class="keyword-heading">Content Score</h4>
+              <div class="content-score-wrapper">
+                <p class="content-score-wrapper--score">100</p>
+
+                <p class="content-score-wrapper--des" dir="auto">
+                  Yes! Looking good!
+                </p>
+              </div>
+            </div>
+            <div class="leaderboard">
+              <h4 class="keyword-heading">Top Contributors</h4>
+              <div class="leaderboard-item">
+                <img
+                  src="https://www.themoviedb.org/t/p/w45_and_h45_face/yYG7Rhn9HfFpssIMeNiDynvxC14.jpg"
+                  alt=""
+                />
+                <p class="leaderboard-item--info">
+                  545
+                  <br />
+                  <span> raze464 </span>
+                </p>
+              </div>
+
+              <div class="leaderboard-item">
+                <img
+                  src="https://www.themoviedb.org/t/p/w45_and_h45_face/hyTHjqs5tS1US3z9cKkIPDG43qt.jpg"
+                  alt=""
+                />
+                <p class="leaderboard-item--info">
+                  127
+                  <br />
+                  <span> vgfu34 </span>
+                </p>
+              </div>
+              <div class="leaderboard-item">
+                <img
+                  src="https://www.themoviedb.org/t/p/w45_and_h45_face/yYG7Rhn9HfFpssIMeNiDynvxC14.jpg"
+                  alt=""
+                />
+                <p class="leaderboard-item--info">
+                  118
+
+                  <br />
+                  <span> tyler </span>
+                </p>
+              </div>
+              <div class="leaderboard-item">
+                <img
+                  src="https://www.themoviedb.org/t/p/w45_and_h45_face/w3BgSplZt0Cptu9ZqNs3cZz3BIY.jpg"
+                  alt=""
+                />
+                <p class="leaderboard-item--info">
+                  96
+                  <br />
+                  <span> Giger </span>
+                </p>
+              </div>
+            </div>
+            <div class="trend">
+              <h4 class="keyword-heading">Top Contributors</h4>
+<a href="#" class="trend-btn">
+  <img src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-217-lock-e9f123776b034a0be74a4f3061cd0b9704e854cb8c29307352f20fec2bac4f46.svg" alt="">
+  LOGIN TO EDIT
+</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===================== END CONTENT ===========  -->
+
+      <!-- ============= START FOOTER =========== -->
+
+      <footer class="footer">
+        <div class="footer-nav">
+          <div class="join-community">
+            <img src="./images/logoFooter.svg" alt="footer-logo" />
+            <a class="footer-btn" href="#!"> JOIN THE COMMUNITY </a>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">THE BASICS</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Giới thiệu về TMDB </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Contact Us </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Support Forums </a>
+              </li>
+              <li>
+                <a class="" href="#!"> API </a>
+              </li>
+              <li>
+                <a class="" href="#!"> System Status </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">GET INVOLVED</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Contribution Bible </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Add New Movie </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Add New TV Show </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">COMMUNITY</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Guidelines </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Discussions </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Leaderboard </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Twitter </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">LEGAL</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Terms of Use </a>
+              </li>
+              <li>
+                <a class="" href="#!"> API Terms of Use </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Privacy Policy </a>
+              </li>
+              <li>
+                <a class="" href="#!"> DMCA Takedown Request </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+      <!-- ============= END FOOTER =========== -->
+    </div>
+  </body>
+</html>
