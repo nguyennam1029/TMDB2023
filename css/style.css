@@ -774,16 +774,19 @@ nav {
 }
 .banner-contents {
   padding: 20px;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .banner-title {
  
-  font-size: 44px;
+  font-size: 28px;
   
 }
 .banner-description {
  
   margin-bottom: 28px;
-  font-size: 30px;
+  font-size: 18px;
 
 }
 .genre-title {
