@@ -508,7 +508,6 @@ nav {
 }
 
 .left-column {
- 
   font-size: 1.2rem;
   line-height: 24px;
 }
@@ -703,143 +702,146 @@ nav {
 /* =============== START RESPONSIVE ================ */
 
 /* ========== TABLET ========= */
-@media screen and (min-width: 540px) and (max-width: 780px){ 
-    nav {
-      display: none;
-    }
-    .mobile-header {
-      color: #fff;
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      background-color: #03233e;
-      justify-content: space-between;
-    }
-    .mobile-header--icon {
-      display: block;
-      width: 24px;
-    }
-    .mobile-header--logo {
-      width: 56px;
-    }
-    .mobile-header--right {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-    .heading {
-      padding: 0 20px;
-      }
-      .list-product {
-        padding: 20px;
-      }
-      .signup-content {
-        padding: 20px;
-      }
-    .footer-nav {
-      
-      grid-template-columns: 1fr 1fr;
-      padding: 30px;
-     
+@media screen and (min-width: 540px) and (max-width: 780px) {
+  nav {
+    display: none;
   }
-   }
+  .mobile-header {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #03233e;
+    justify-content: space-between;
+  }
+  .mobile-header--icon {
+    display: block;
+    width: 24px;
+  }
+  .mobile-header--logo {
+    width: 56px;
+  }
+  .mobile-header--right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .heading {
+    padding: 0 20px;
+  }
+  .list-product {
+    padding: 20px;
+  }
+  .signup-content {
+    padding: 20px;
+  }
+  .footer-nav {
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+  }
+}
 
 /* =========== MOBILE ========== */
-   @media (max-width: 540px) { 
-nav {
-  display: none;
-}
-.mobile-header {
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  background-color: #03233e;
-  justify-content: space-between;
-}
-.mobile-header--icon {
-  display: block;
-  width: 24px;
-}
-.mobile-header--logo {
-  width: 56px;
-}
-.mobile-header--right {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-.banner {
-  width: 100%;
-}
-.banner-contents {
-  padding: 20px;
-  display: flex;
+@media (max-width: 540px) {
+  nav {
+    display: none;
+  }
+  .mobile-header {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #03233e;
+    justify-content: space-between;
+  }
+  .mobile-header--icon {
+    display: block;
+    width: 24px;
+  }
+  .mobile-header--logo {
+    width: 56px;
+  }
+  .mobile-header--right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner-contents {
+    padding: 20px;
+    display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.banner-title {
- 
-  font-size: 28px;
-  
-}
-.banner-description {
- 
-  margin-bottom: 28px;
-  font-size: 18px;
+  }
+  .banner-title {
+    font-size: 28px;
+  }
+  .banner-description {
+    margin-bottom: 28px;
+    font-size: 18px;
+  }
+  .movie-banner {
+    display: flex;
+    flex-direction: column;
 
-}
-.genre-title {
-  margin-top: 20px;
-}
-.heading {
-padding: 0 20px;
-}
-.selector {
-  padding-right: 14px;
+    align-items: center;
+  }
+  .movie-youtube {
+    margin-left: 0;
+  }
+  .signup-content h2 {
+    font-size: 28px;
+  }
+  .genre-title {
+    margin-top: 20px;
+  }
+  .heading {
+    padding: 0 20px;
+  }
+  .selector {
+    padding-right: 14px;
+  }
+  .selected-icon {
+    display: block;
+    width: 20px;
+    color: #fff;
+  }
 
-}
-.selected-icon {
-  display: block;
-  width: 20px;
-  color: #fff;
-}
+  .list-product {
+    padding: 20px;
+  }
+  .unchor {
+    display: none;
+  }
+  .signup-content {
+    padding: 20px;
+  }
 
-.list-product {
-  padding: 20px;
+  .column-content {
+    grid-template-columns: 100%; /* 2 cột, cột trái rộng 60%, cột phải rộng 40% */
+    grid-gap: 40px; /* Khoảng cách 20px giữa cột trái và cột phải */
+  }
+  .signup-button {
+    margin-top: 10px;
+  }
+  .leaderboard-box {
+    padding: 20px;
+  }
+  .leaderboard-content {
+    grid-template-columns: 1fr;
+  }
+  .footer-nav {
+    padding: 20px;
+    grid-template-columns: 1fr;
+  }
+  .join-community {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .join-community > img {
+    display: none;
+  }
 }
-.unchor {
-  display: none;
-}
-.signup-content {
-  padding: 20px;
-}
-
-.column-content {
- 
-  grid-template-columns: 100%; /* 2 cột, cột trái rộng 60%, cột phải rộng 40% */
-  grid-gap: 40px; /* Khoảng cách 20px giữa cột trái và cột phải */
-
-}
-.signup-button {
-  margin-top: 10px;
-}
-.leaderboard-box {
-  padding: 20px;
-}
-.leaderboard-content {
-  grid-template-columns: 1fr;
-}
-.footer-nav {
-  padding: 20px;
-  grid-template-columns: 1fr;
-}
-.join-community {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-.join-community > img {
-  display: none;
-}
-   }
 /* =============== END RESPONSIVE ================ */
