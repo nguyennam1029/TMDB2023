@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detail Page</title>
+    <!-- OWL CAROUSEL -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+  <!-- --- ICONs ----  -->
+  <link rel="stylesheet" href="./plugin/fontawesome-free-6.1.2-web/css/all.min.css">
+
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/detail.css" />
   </head>
@@ -341,12 +346,101 @@
             </div>
           </div>
         </div>
+        <div class="movie-detail-rp">
+          <div class="movie-detail-rp-poster">
+            <img
+                src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3aJvYn7PBMBOYkZdD2Rc0gn1Lxd.jpg"
+                alt=""
+              />
+          </div>
+          <div class="movie-detail-rp-content">
+
+            <div class="poster-title">
+              <h2>Trừng Phạt</h2>
+              <span>(2022)</span>
+            </div>
+
+            <ul class="poster-actions">
+              <li class="chart">
+                <div class="chart-content">
+                  <span class="chart-content--score"> 89<sup>%</sup> </span>
+                </div>
+                <p class="chart-title">
+                  User
+                  Score
+                </p>
+              </li>
+             
+              <li class="poster-item">
+                <a href="#" class="poster-item--link">
+                  <img
+                    src="https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-175-play-806cb05551791b8dedd7f8d38fd3bd806e2d397fcfeaa00a5cc9129f0819fd07.svg"
+                    alt=""
+                  />
+                </a>
+                Play Trailer
+              </li>
+            </ul>
+
+            
+            <div class="poster-facts">
+             <div>
+              <span class="certification">PG - 13</span>
+              <span class="date">08/25/2023 (US) </span>
+              <span class="runtime poster-facts--relative"> 1h24m </span>
+             </div>
+              
+              <span class="category poster-facts--relative">
+                Phim Hành Động, Phim Bí Ẩn, Phim Gây Cấn, Phim Hình Sự
+              </span>
+            </div>
+
+            <div class="overview">
+              <p class="overview-lable">Overview</p>
+              <span>
+                Matt Turner (Liam Neeson) là một doanh nhân người Mỹ thành
+                đạt sống ở Berlin, đang phải cân bằng giữa sự nghiệp tài
+                chính đang bùng nổ và trách nhiệm gia đình. Một buổi sáng
+                đang lái xe đưa con đến trường, Matt nhận được một cuộc điện
+                thoại từ một giọng nói bí ẩn: có một quả bom dưới ghế của
+                anh ấy sẽ phát nổ trừ khi anh ấy hoàn thành một loạt nhiệm
+                vụ cụ thể, và nhanh chóng. Bị mắc kẹt trong một cuộc rượt
+                đuổi tốc độ cao khắp thành phố, Matt phải làm theo chỉ dẫn
+                ngày càng nguy hiểm của “kẻ lạ mặt” trong cuộc chạy đua với
+                thời gian để bảo vệ gia đình và tìm lời giải đáp cho những
+                bí ẩn đang diễn ra. Bộ phim ly kỳ về chiếc đồng hồ tích tắc
+                nhập vai này của các nhà sản xuất phim NON-STOP và THE
+                COMMUTER thu hút khán giả tham gia vào một hành trình cứu
+                chuộc và trả thù có chỉ số octan cao.
+              </span>
+            </div>
+
+            <div class="people-poster">
+              <div class="people-poster--profile">
+                <a href="/person/41671-nimrod-antal">Nimród Antal</a>
+                <p class="character">Director</p>
+              </div>
+              <div class="people-poster--profile">
+                <a href="/person/41671-nimrod-antal">Nimród Antal</a>
+                <p class="character">Director</p>
+              </div>
+              <div class="people-poster--profile">
+                <a href="/person/41671-nimrod-antal">Nimród Antal</a>
+                <p class="character">Director</p>
+              </div>
+              <div class="people-poster--profile">
+                <a href="/person/41671-nimrod-antal">Nimród Antal</a>
+                <p class="character">Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div class="content">
           <div class="content-left">
             <h2 class="content-left--heading">Top Billed Cast</h2>
-            <div class="scroll-people">
-              <div class="performer">
+            <div class="owl-carousel owl-theme scroll-people">
+              <div class="performer ">
                 <img
                   src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
                   class="performer-image"
@@ -359,7 +453,7 @@
                 </div>
               </div>
 
-              <div class="performer">
+              <div class="performer ">
                 <img
                   src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
                   class="performer-image"
@@ -372,7 +466,7 @@
                 </div>
               </div>
 
-              <div class="performer">
+              <div class="performer ">
                 <img
                   src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
                   class="performer-image"
@@ -384,7 +478,7 @@
                   >
                 </div>
               </div>
-              <div class="performer">
+              <div class="performer ">
                 <img
                   src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
                   class="performer-image"
@@ -396,7 +490,7 @@
                   >
                 </div>
               </div>
-              <div class="performer">
+              <div class="performer ">
                 <img
                   src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
                   class="performer-image"
@@ -408,7 +502,43 @@
                   >
                 </div>
               </div>
-              <div class="performer">
+              <div class="performer ">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer ">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer ">
+                <img
+                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  class="performer-image"
+                />
+                <div class="performer-info">
+                  <h2 class="performer-info--name">Sae Bom</h2>
+                  <span class="performer-info--des"
+                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                  >
+                </div>
+              </div>
+              <div class="performer ">
                 <img
                   src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
                   class="performer-image"
@@ -457,7 +587,7 @@
               </div>
             </div>
 
-            <div class="panel">
+            <div class="panel panel-sm">
               <div class="collection">
                 <div class="collection-header">
                   <h3>Part of the Loạt phim Fast & Furious</h3>
@@ -472,81 +602,45 @@
             </div>
 
             <h2 class="content-left--heading sm">Recommendations</h2>
-            <div class="scroll-people">
-              <div class="performer">
+            <div class=" scroll-people recommendations" id="recommendations">
+            
+              <div class="performer recommendation">
                 <img
-                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  src="https://www.themoviedb.org/t/p/w250_and_h141_face/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg"
                   class="performer-image"
                 />
-                <div class="performer-info">
-                  <h2 class="performer-info--name">Sae Bom</h2>
-                  <span class="performer-info--des"
-                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                <div class="performer-info recommendation">
+                  <h2 class="performer-info--name recommendation">Sae Bom</h2>
+                  <span class="performer-info--des recommendation"
+                    >78%</span
                   >
                 </div>
               </div>
-
-              <div class="performer">
+              <div class="performer recommendation">
                 <img
-                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  src="https://www.themoviedb.org/t/p/w250_and_h141_face/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg"
                   class="performer-image"
                 />
-                <div class="performer-info">
-                  <h2 class="performer-info--name">Sae Bom</h2>
-                  <span class="performer-info--des"
-                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                <div class="performer-info recommendation">
+                  <h2 class="performer-info--name recommendation">Sae Bom</h2>
+                  <span class="performer-info--des recommendation"
+                    >78%</span
                   >
                 </div>
               </div>
-
-              <div class="performer">
+              <div class="performer recommendation">
                 <img
-                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
+                  src="https://www.themoviedb.org/t/p/w250_and_h141_face/4fLZUr1e65hKPPVw0R3PmKFKxj1.jpg"
                   class="performer-image"
                 />
-                <div class="performer-info">
-                  <h2 class="performer-info--name">Sae Bom</h2>
-                  <span class="performer-info--des"
-                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
+                <div class="performer-info recommendation">
+                  <h2 class="performer-info--name recommendation">Sae Bom</h2>
+                  <span class="performer-info--des recommendation"
+                    >78%</span
                   >
                 </div>
               </div>
-              <div class="performer">
-                <img
-                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
-                  class="performer-image"
-                />
-                <div class="performer-info">
-                  <h2 class="performer-info--name">Sae Bom</h2>
-                  <span class="performer-info--des"
-                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
-                  >
-                </div>
-              </div>
-              <div class="performer">
-                <img
-                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
-                  class="performer-image"
-                />
-                <div class="performer-info">
-                  <h2 class="performer-info--name">Sae Bom</h2>
-                  <span class="performer-info--des"
-                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
-                  >
-                </div>
-              </div>
-              <div class="performer">
-                <img
-                  src="https://www.themoviedb.org/t/p/w235_and_h235_face/6q8WnNGmI9aB05rFW7AQQcqyWGq.jpg"
-                  class="performer-image"
-                />
-                <div class="performer-info">
-                  <h2 class="performer-info--name">Sae Bom</h2>
-                  <span class="performer-info--des"
-                    >섹스 소녀 12, 이모의 유혹 3, 화끈한 미용실</span
-                  >
-                </div>
-              </div>
+              
             </div>
           </div>
           <div class="content-right">
@@ -766,5 +860,45 @@
 
       <!-- ============= END FOOTER =========== -->
     </div>
+ 
+    </script>
+     <!-- JQUERY -->
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+     <!-- OWL CAROUSEL -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+     <!-- APP SCRIPT -->
+     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+     <script>
+      $(document).ready(function(){
+        let navText = [
+    "<i class='fa-solid fa-angle-left'></i>",
+    "<i class='fa-solid fa-angle-right'></i>",
+  ];
+  $(".owl-carousel").owlCarousel({
+    center: true,
+    items: 2,
+    dots: false,
+    loop: true,
+    autoplay: true,
+    nav: true,
+    // navText: navText,
+    autoplayHoverPause: true,
+    margin:10,
+    responsive: {
+      500: {
+        items: 4,
+      },
+      1200: {
+        items: 6,
+      },
+      1600: {
+        items: 8,
+      },
+    },
+  });
+
+
+});
+     </script>
   </body>
 </html>
