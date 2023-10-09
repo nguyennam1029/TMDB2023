@@ -262,10 +262,10 @@
 }
 .scroll-people {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   margin: 20px 0;
   gap: 16px;
-
+overflow-x: scroll;
   padding-bottom: 20px;
 }
 .owl-stage-outer {
@@ -309,7 +309,7 @@
   border: 1px solid rgba(227, 227, 227, 1);
   background-color: #fff;
   border-radius: 4px;
-  width: 138px;
+  min-width: 138px;
 }
 .performer.recommendation {
   width: 250px;

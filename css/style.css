@@ -78,14 +78,12 @@ nav {
   margin: 0 auto;
   max-width: 1300px;
 
-  /* animation */
+ 
   transition-timing-function: ease-in;
   transition: all 0.5s;
 }
 
-.hide-nav {
-  visibility: hidden;
-}
+
 
 .navigationBar {
   display: flex;
