@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TMDB</title>
-    
+
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/signUp.css" />
+    <link rel="stylesheet" href="./css/search.css" />
   </head>
   <body>
     <div id="app">
@@ -78,13 +79,24 @@
                 </li>
 
                 <li id="noti">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="noti-icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="noti-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                    />
                   </svg>
                   <span>1</span>
                 </li>
 
-                <li id="info" >
+                <li id="info">
                   <a href="/" class="info-name">N</a>
                 </li>
                 <li id="signIn">
@@ -103,10 +115,20 @@
                   </a>
                 </li>
                 <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="signOut">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    id="signOut"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+                    />
                   </svg>
-                  
                 </li>
               </ul>
             </div>
@@ -158,170 +180,53 @@
       <!-- =================== END MENU ============  -->
 
       <!-- ============= START CONTENT =========== -->
+      <div class="content-form">
+
+      <div class="search-form">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="search-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
+          <input type="text" id="searchInputTop" placeholder="Search for a movie, tv show, person...">
+      </div>
+    </div>
+
       <div class="content">
         <div class="content-left">
-          <h3>Benefits of being a member</h3>
+          <h3>Search Results</h3>
           <ul class="list-feature">
             <li class="feature-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-item--icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
-
-              Find something to watch on your subscribed streaming services
+              <span> TV Show </span>
+              <p>5</p>
             </li>
             <li class="feature-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-item--icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
+              <span> People </span>
+              <p>5</p>
+            </li>
 
-              Log the movies and TV shows you have watched
+            <li class="feature-item">
+              <span> Movies </span>
+              <p>15</p>
             </li>
             <li class="feature-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-item--icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
-
-              Keep track of your favourite movies and TV shows and get
-              recommendations from them
+              <span> Keywords </span>
+              <p>1</p>
             </li>
             <li class="feature-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-item--icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
-
-              Build and maintain a personal watchlist
+              <span> Companies </span>
+              <p>3</p>
             </li>
             <li class="feature-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-item--icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
-
-              Build custom mixed lists (movies and TV)
+              <span> Collections </span>
+              <p>0</p>
             </li>
             <li class="feature-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-item--icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
-
-              Take part in movie and TV discussions
-            </li>
-            <li class="feature-item">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="feature-item--icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M4.5 12.75l6 6 9-13.5"
-                />
-              </svg>
-
-              Contribute to, and improve the information in our database
+              <span> Networks </span>
+              <p>0</p>
             </li>
           </ul>
         </div>
-        <div class="content-right">
-          <h2 class="content-right--heading">Sign up for an account</h2>
-          <p class="content-right--des">
-            Signing up for an account is free and easy. Fill out the form below
-            to get started. JavaScript is required to to continue.
-          </p>
-          <div>
-            <form id="signUpForm">
-              <div class="form-field">
-                <p>Username</p>
-                <input type="text" id="username" />
-              </div>
-              <div class="form-field">
-                <p>Email</p>
-                <input type="email" id="email" />
-              </div>
-              <div class="form-field">
-                <p>Password</p>
-                <input type="password" id="password" />
-              </div>
-
-              <p class="form-des">
-                By clicking the "Sign up" button below, I certify that I have
-                read and agree to the TMDB terms of use and privacy policy.
-                Cancel
-              </p>
-
-              <button type="submit">Sign Up</button>
-              <a href="" class="cancel">Cancel</a>
-            </form>
-          </div>
+        <div class="content-right" id="content-right">
+          
         </div>
       </div>
 
@@ -415,62 +320,88 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    
+
+    <!-- <script src="./main.js" type="module"></script> -->
     <script type="module">
-      import {
-        auth,
-        createUserWithEmailAndPassword,
-        db,
-        doc,
-        setDoc,
-      } from "./fireBaseConfig.js";
+// Lấy giá trị của query parameter từ URL
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const keyword = urlParams.get("query");
 
-      // Lấy đối tượng form và các trường input
-      const signUpForm = document.getElementById("signUpForm");
-      const usernameInput = document.getElementById("username");
-      const emailInput = document.getElementById("email");
-      const passwordInput = document.getElementById("password");
+// Lấy đối tượng ô input từ DOM
+const searchInputTop = document.getElementById("searchInputTop");
 
-      // Gán sự kiện submit cho form
-      signUpForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Ngừng chuyển hướng trang sau khi nhấn nút submit
+searchInputTop.addEventListener("keyup", function(event) {
+  // Kiểm tra xem phím đã được nhấn có phải là "Enter" không (mã phím 13)
+  if (event.keyCode === 13) {
+    // Lấy giá trị từ ô input
+    const keyword = searchInputTop.value;
+  const encodedQuery = encodeURIComponent(keyword).replace(/%20/g, '+');
+  // Kiểm tra xem từ khóa có được nhập không
+  if (keyword) {
+    // Chuyển hướng trang với query parameter
+    window.location.href = `search.html?query=${encodedQuery}`;
+  } else {
+    // Nếu không có từ khóa, xử lý tùy thuộc vào yêu cầu của bạn
+    // Ví dụ: Hiển thị thông báo lỗi hoặc không thực hiện chuyển hướng
+    alert("Vui lòng nhập từ khóa tìm kiếm.");
+  }
+  }
+});
 
-        // Lấy giá trị từ các trường input
-        const username = usernameInput.value;
-        const email = emailInput.value;
-        const password = passwordInput.value;
-        createUserWithEmailAndPassword(auth, email, password)
-          .then((userCredential) => {
-            // Đăng ký thành công
-            const user = userCredential.user;
-            
+// Gán giá trị từ query parameter vào ô input
+if (keyword) {
+  // Kiểm tra xem keyword có giá trị không trước khi gán
+  searchInputTop.value = decodeURIComponent(keyword); // Decode để hiển thị ký tự đặc biệt nếu có
+  const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZjEzOGQyZTQzOGY0OGMwOTEwZTY4MDZmNWIwZmNlMSIsInN1YiI6IjYzMmM3NWQwNmNhOWEwMDA3ZDdmZmFkNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.uvH3T6N3mioUVosg034b69t7JljiPwrcj_EHU19cQgA'
+  }
+};
 
-            // Lưu thông tin người dùng vào Firestore
-            const userDocRef = doc(db, "users", user.uid);
-            const userData = {
-              email: user.email,
-              // password: user.password,
-              displayName: username,
-              // Thêm thông tin người dùng khác nếu cần
-            };
+fetch(`https://api.themoviedb.org/3/search/movie?api_key=ef138d2e438f48c0910e6806f5b0fce1&query=${keyword}`, options)
+  .then(response => response.json())
+  .then(response => {
+  const listProduct = response.results;
+ 
 
-            setDoc(userDocRef, userData)
-              .then(() => {
-                alert("Đăng kí thành công");
-            window.location.assign("./index.html");
-                
-              })
-              .catch((error) => {
-                console.error("Error saving user data:", error);
-              });
-          })
-          .catch((error) => {
-            // Đăng ký thất bại
-            console.error("Error registering user:", error);
-          });
-      });
+          const productTemplates = listProduct
+            .map(
+              (item) =>
+                `   <a href="" class="search-item">
+            <img
+            src=${item?.poster_path ? `http://image.tmdb.org/t/p/w500/${item?.poster_path}` : 'https://media.istockphoto.com/id/1413239688/photo/update.webp?b=1&s=170667a&w=0&k=20&c=CI5rIOHXUsmYyIPYT3zPp6zh5B_d_oHBskgWHNxG8Z0='}
+            alt=""
+            />
+
+            <div class="search-item-info">
+             <div>
+                <h4 class="search-item-info--name">${item?.name || item?.title}</h4>
+                <span class="search-item-info--time">${
+              item?.first_air_date || item?.release_date
+            }</span>
+             </div>
+              <p class="search-item-info--des">
+                ${item?.overview}
+              </p>
+            </div>
+          </a>`
+            )
+            .join("");
+          const container = document.getElementById("content-right");
+          console.log("🚀 ~ file: search.html:376 ~ container:", container)
+          container.innerHTML = productTemplates;
+        }
+  )
+  .catch(err => console.error(err));
+} else {
+  // Nếu không có keyword, xử lý tùy thuộc vào yêu cầu của bạn
+  // Ví dụ: Hiển thị thông báo hoặc không thực hiện hành động gì cả
+  alert("Không có từ khóa tìm kiếm được truyền.");
+}
+
     </script>
-    <script src="./main.js" type="module"></script>
-
   </body>
 </html>

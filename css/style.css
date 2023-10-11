@@ -189,7 +189,56 @@ nav {
 .menu-icons.search {
   width: 30px;
 }
+#noti {
+  position: relative;
+  color: #fff;
+}
+.noti-icon {
+  width: 22px;
+  height: 22px;
+}
+#noti > span {
+  position: absolute;
+  top: -4px;
+  right: -13px;
+  font-size: 8px;
 
+  width: 15px;
+  height: 15px;
+  line-height: 0;
+  border-radius: 50%;
+  box-sizing: border-box;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c61439;
+}
+.info-name {
+  display: block;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: #01d277;
+}
+#signOut {
+  display: none;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+#signIn,#signUp {
+  display: none;
+}
 /* <!-- ============= START BANNER =========== --> */
 .banner {
   max-width: 1300px;
@@ -239,6 +288,7 @@ nav {
 }
 
 .input-submit {
+  cursor: pointer;
   font: inherit;
   color: rgba(255, 255, 255, 1);
   font-weight: 600;
