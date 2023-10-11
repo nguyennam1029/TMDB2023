@@ -91,3 +91,37 @@ line-height:23.04px;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+@media screen and (max-width: 780px) {
+    .content-form {
+      padding: 0 20px;
+    }
+    .content {
+      display: block;
+      padding: 0 20px;
+      margin-top: 0;
+    }
+    .content-left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .list-feature {
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+    }
+    .search-item-info {
+        justify-content: space-around;
+    }
+    .search-item-info--name {
+        font-size: 16px;
+        display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    }
+    .search-item-info--des {
+        font-size: 14px;
+        line-height: 16px;
+    }
+  }
