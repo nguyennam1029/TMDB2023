@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TMDB</title>
+    
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/signUp.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- ================ START MENU ================ -->
+      <div class="header">
+        <nav>
+          <div class="navigationBar">
+            <a href="/" class="nav-logo">
+              <img src="images/logo.svg" alt="logo" width="154" height="20" />
+            </a>
+
+            <div class="nav-list-container">
+              <ul>
+                <li class="nav-list-container--item">
+                  <a href="/">Movies</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                    <a class="menu-group--link" href="#">Now Playing</a>
+                    <a class="menu-group--link" href="#">Upcoming</a>
+                    <a class="menu-group--link" href="#">Top Rated</a>
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">TV Shows</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./tvShow.html">Popular</a>
+                    <a class="menu-group--link" href="#">Airing Today</a>
+                    <a class="menu-group--link" href="#">On TV</a>
+                    <a class="menu-group--link" href="#">Top Rated</a>
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">People</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./people.html">Popular</a>
+                  </div>
+                </li>
+
+                <li class="nav-list-container--item">
+                  <a href="/">More</a>
+                  <div class="menu-group">
+                    <a class="menu-group--link" href="./movies.html">Popular</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Airing Today</a
+                    >
+                    <a class="menu-group--link" href="./movies.html">On TV</a>
+                    <a class="menu-group--link" href="./movies.html"
+                      >Top Rated</a
+                    >
+                  </div>
+                </li>
+              </ul>
+
+              <ul>
+                <li>
+                  <a href="/">
+                    <i class="menu-icons">
+                      <img src="images/plus.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <div class="box-visible">EN</div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/">Login</a>
+                </li>
+
+                <li>
+                  <a href="/">Join TMDB</a>
+                </li>
+
+                <li>
+                  <a href="/">
+                    <i class="menu-icons search">
+                      <img src="./images/search.svg" alt="" />
+                    </i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- === menu mobile ===  -->
+        <div class="mobile-header">
+          <span class="mobile-header--icon menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="feature-item--icon"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 5.25zm0 4.5A.75.75 0 013.75 9h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 9.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75zm0 4.5a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </span>
+          <a href="" class="mobile-header--logo">
+            <img src="./images/logoFooter.svg" alt="" />
+          </a>
+          <div class="mobile-header--right">
+            <span class="mobile-header--icon user">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="feature-item--icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </span>
+            <img
+              class="mobile-header--icon search"
+              src="./images/search.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <!-- =================== END MENU ============  -->
+
+      <!-- ============= START CONTENT =========== -->
+      <div class="content">
+        <div class="content-left">
+          <h3>Benefits of being a member</h3>
+          <ul class="list-feature">
+            <li class="feature-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-item--icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+
+              Find something to watch on your subscribed streaming services
+            </li>
+            <li class="feature-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-item--icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+
+              Log the movies and TV shows you have watched
+            </li>
+            <li class="feature-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-item--icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+
+              Keep track of your favourite movies and TV shows and get
+              recommendations from them
+            </li>
+            <li class="feature-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-item--icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+
+              Build and maintain a personal watchlist
+            </li>
+            <li class="feature-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-item--icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+
+              Build custom mixed lists (movies and TV)
+            </li>
+            <li class="feature-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-item--icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+
+              Take part in movie and TV discussions
+            </li>
+            <li class="feature-item">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="feature-item--icon"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.5 12.75l6 6 9-13.5"
+                />
+              </svg>
+
+              Contribute to, and improve the information in our database
+            </li>
+          </ul>
+        </div>
+        <div class="content-right">
+          <h2 class="content-right--heading">Sign up for an account</h2>
+          <p class="content-right--des">
+            Signing up for an account is free and easy. Fill out the form below
+            to get started. JavaScript is required to to continue.
+          </p>
+          <div>
+            <form id="signUp">
+              <div class="form-field">
+                <p>Username</p>
+                <input type="text" id="username" />
+              </div>
+              <div class="form-field">
+                <p>Email</p>
+                <input type="email" id="email" />
+              </div>
+              <div class="form-field">
+                <p>Password</p>
+                <input type="password" id="password" />
+              </div>
+
+              <p class="form-des">
+                By clicking the "Sign up" button below, I certify that I have
+                read and agree to the TMDB terms of use and privacy policy.
+                Cancel
+              </p>
+
+              <button type="submit">Sign Up</button>
+              <a href="" class="cancel">Cancel</a>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============= END CONTENT =========== -->
+
+      <!-- ============= START FOOTER =========== -->
+
+      <footer class="footer">
+        <div class="footer-nav">
+          <div class="join-community">
+            <img src="./images/logoFooter.svg" alt="footer-logo" />
+            <a class="footer-btn" href="#!"> JOIN THE COMMUNITY </a>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">THE BASICS</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Giới thiệu về TMDB </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Contact Us </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Support Forums </a>
+              </li>
+              <li>
+                <a class="" href="#!"> API </a>
+              </li>
+              <li>
+                <a class="" href="#!"> System Status </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">GET INVOLVED</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Contribution Bible </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Add New Movie </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Add New TV Show </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">COMMUNITY</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Guidelines </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Discussions </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Leaderboard </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Twitter </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h5 class="footer-column--heading">LEGAL</h5>
+            <ul class="footer-column--title">
+              <li>
+                <a class="" href="#!"> Terms of Use </a>
+              </li>
+              <li>
+                <a class="" href="#!"> API Terms of Use </a>
+              </li>
+              <li>
+                <a class="" href="#!"> Privacy Policy </a>
+              </li>
+              <li>
+                <a class="" href="#!"> DMCA Takedown Request </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+      <!-- ============= END FOOTER =========== -->
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
+    <script type="module">
+      import {
+        auth,
+        createUserWithEmailAndPassword,
+        db,
+        doc,
+        setDoc,
+      } from "./fireBaseConfig.js";
+
+      // Lấy đối tượng form và các trường input
+      const signUpForm = document.getElementById("signUp");
+      const usernameInput = document.getElementById("username");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+
+      // Gán sự kiện submit cho form
+      signUpForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Ngừng chuyển hướng trang sau khi nhấn nút submit
+
+        // Lấy giá trị từ các trường input
+        const username = usernameInput.value;
+        const email = emailInput.value;
+        const password = passwordInput.value;
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Đăng ký thành công
+            const user = userCredential.user;
+            console.log("🚀 ~ file: signUp.html:422 ~ .then ~ user:", user);
+
+            // Lưu thông tin người dùng vào Firestore
+            const userDocRef = doc(db, "users", user.uid);
+            const userData = {
+              email: user.email,
+              // password: user.password,
+              displayName: username,
+              // Thêm thông tin người dùng khác nếu cần
+            };
+
+            setDoc(userDocRef, userData)
+              .then(() => {
+                alert("Đăng kí thành công");
+            // window.location.assign("./index.html");
+                
+              })
+              .catch((error) => {
+                console.error("Error saving user data:", error);
+              });
+          })
+          .catch((error) => {
+            // Đăng ký thất bại
+            console.error("Error registering user:", error);
+          });
+      });
+    </script>
+  </body>
+</html>

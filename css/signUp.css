@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  font-family: "Source Sans 3", sans-serif;
+}
+.navigationBar {
+  padding: 0;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(203, 203, 203);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+#app {
+  overflow-x: hidden;
+}
+.content {
+    max-width: 1300px;
+    margin: 100px auto;
+    display: flex;
+    gap: 60px;
+    overflow: hidden;
+}
+.content-left {
+    width: 260px;
+    border: 1px solid rgba(227,227,227,1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.content-left > h3 {
+    color: #fff;
+    background-color: rgb(1,180,228);
+    padding: 20px;
+}
+ul {
+    padding: 20px;
+
+}
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+.feature-item--icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+.content-right {
+    flex: 1;
+}
+.content-right--heading {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.content-right--des {
+  color: rgb(63, 63, 63);
+  margin-bottom: 28px;
+  line-height: 22px;
+}
+.form-field {
+  margin-bottom: 20px;
+}
+.form-field > p {
+  color: rgb(63, 63, 63);
+  margin-bottom: 4px;
+}
+.form-field > input {
+  width: 100%;
+  border: 1px solid rgba(227,227,227,1);
+border-radius: 6px;
+padding: 10px;
+}
+.form-des {
+  color: rgb(33, 37, 41);
+  margin: 30px 0;
+}
+button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  background-color: rgb(1, 180, 228);
+  font-weight: 700;
+  color: #f1f1f1;
+}
+.cancel {
+  color: rgb(1, 180, 228);
+  margin-left: 8px;
+}
