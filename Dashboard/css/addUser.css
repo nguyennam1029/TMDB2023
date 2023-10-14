@@ -1,0 +1,54 @@
+.dashboard-heading {
+  margin-top: 50px;
+
+  text-align: center;
+}
+.form-add-user {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    font-size: 16px;
+    margin-top: 40px;
+}
+.form-field--input {
+  display: block;
+  border-radius: 12px;
+border: 1px solid #9FA6B2;
+padding: 11px;
+width: 100%;
+margin-top: 10px;
+}
+.form-radio {
+margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  border: 1px solid #9FA6B2;
+padding: 8px;
+border-radius: 12px;
+justify-content: center;
+
+}
+.form-radio > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.form-radio > div > label{
+  cursor: pointer;
+
+}
+.input-title {
+  font-weight: 500;
+}
+.btn-add-user {
+  display: flex;
+  grid-column: span 2; /* Nút chiếm 2 cột trong grid */
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+padding: 10px;
+  margin: 0 auto;
+}
+  

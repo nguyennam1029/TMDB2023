@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Foldit:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/addUser.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <title>Update User</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar Section -->
+      <aside>
+        <div class="toggle">
+          <div class="logo">
+            <img src="https://tmdb-rethunk.vercel.app/tmdb.png" />
+            <h2>TMDB<span class="danger">ORG</span></h2>
+          </div>
+          <div class="close" id="close-btn">
+            <span class="material-icons-sharp"> close </span>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <a href="/Dashboard/index.html">
+            <span class="material-icons-sharp"> dashboard </span>
+            <h3>Dashboard</h3>
+          </a>
+          <a href="/Dashboard/users.html">
+            <span class="material-icons-sharp"> person_outline </span>
+            <h3>Users</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> receipt_long </span>
+            <h3>History</h3>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp"> mail_outline </span>
+            <h3>Tickets</h3>
+            <span class="message-count">27</span>
+          </a>
+
+          <a href="#">
+            <span class="material-icons-sharp"> report_gmailerrorred </span>
+            <h3>Reports</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> settings </span>
+            <h3>Settings</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> add </span>
+            <h3>New Login</h3>
+          </a>
+          <a href="#">
+            <span class="material-icons-sharp"> logout </span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+      <!-- End of Sidebar Section -->
+
+      <!-- Main Content -->
+
+      <main>
+        <h1 class="dashboard-heading">Update User</h1>
+        <!-- Recent Orders Table -->
+
+        <div>
+          <form class="form-add-user" id="formUpdate">
+            <div class="form-field">
+              <span class="input-title">Display Name</span>
+              <input
+                type="text"
+                class="form-field--input"
+                name="display-name"
+              />
+            </div>
+            <div class="form-field">
+              <span class="input-title">Email</span>
+              <input type="email" class="form-field--input" name="email" />
+            </div>
+            <div>
+              <label class="input-title">Role:</label>
+              <div class="form-radio">
+                <div>
+                  <input
+                    type="radio"
+                    id="moderator"
+                    name="role"
+                    value="moderator"
+                  />
+                  <label for="moderator">Moderator</label>
+                </div>
+                <div>
+                  <input type="radio" id="editor" name="role" value="editor" />
+                  <label for="editor">Editor</label>
+                </div>
+                <div>
+                  <input type="radio" id="user" name="role" value="user" />
+                  <label for="user">User</label><br />
+                </div>
+              </div>
+            </div>
+            <div>
+              <label class="input-title">Status:</label>
+              <div class="form-radio">
+                <div>
+                  <input
+                    type="radio"
+                    id="Active "
+                    name="status"
+                    value="active "
+                  />
+                  <label for="Active ">Active </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="Pending "
+                    name="status"
+                    value="pending "
+                  />
+                  <label for="Pending ">Pending </label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="Banned "
+                    name="status"
+                    value="banned "
+                  />
+                  <label for="Banned ">Banned </label><br />
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="notification add-user btn-add-user">
+              <span class="material-icons-sharp"> add </span>
+              <h3>Update User</h3>
+            </button>
+          </form>
+        </div>
+        <!-- End of Recent Orders -->
+      </main>
+      <!-- End of Main Content -->
+
+      <!-- Right Section -->
+      <div class="right-section">
+        <div class="nav">
+          <button id="menu-btn">
+            <span class="material-icons-sharp"> menu </span>
+          </button>
+          <div class="dark-mode">
+            <span class="material-icons-sharp active"> light_mode </span>
+            <span class="material-icons-sharp"> dark_mode </span>
+          </div>
+
+          <div class="profile">
+            <div class="info">
+              <p>Hey, <b>Reza</b></p>
+              <small class="text-muted">Admin</small>
+            </div>
+            <div class="profile-photo">
+              <img src="images/profile-1.jpg" />
+            </div>
+          </div>
+        </div>
+        <!-- End of Nav -->
+
+        <div class="user-profile">
+          <div class="logo">
+            <img src="https://tmdb-rethunk.vercel.app/tmdb.png" />
+            <h2>TMDB</h2>
+            <p>The Movie Database</p>
+          </div>
+        </div>
+
+        <div class="reminders">
+          <div class="header">
+            <h2>Reminders</h2>
+            <span class="material-icons-sharp"> notifications_none </span>
+          </div>
+
+          <div class="notification">
+            <div class="icon">
+              <span class="material-icons-sharp"> volume_up </span>
+            </div>
+            <div class="content">
+              <div class="info">
+                <h3>Workshop</h3>
+                <small class="text_muted"> 08:00 AM - 12:00 PM </small>
+              </div>
+              <span class="material-icons-sharp"> more_vert </span>
+            </div>
+          </div>
+
+          <div class="notification deactive">
+            <div class="icon">
+              <span class="material-icons-sharp"> edit </span>
+            </div>
+            <div class="content">
+              <div class="info">
+                <h3>Workshop</h3>
+                <small class="text_muted"> 08:00 AM - 12:00 PM </small>
+              </div>
+              <span class="material-icons-sharp"> more_vert </span>
+            </div>
+          </div>
+
+          <div class="notification add-reminder">
+            <div>
+              <span class="material-icons-sharp"> add </span>
+              <h3>Add Reminder</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module">
+      import {
+        db,
+        collection,
+        addDoc,
+        serverTimestamp,
+        getDoc,
+        updateDoc,
+        doc,
+      } from "../fireBaseConfig.js";
+
+      // ==================== HANDEL UPDATE ====================
+
+      // ---------------- SET VALUE -------------
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+
+      var postID = urlParams.get("id");
+
+      async function getData(postId) {
+        try {
+          const docRef = doc(db, "users", postId);
+          const docSnap = await getDoc(docRef);
+          if (docSnap.exists()) {
+            const docData = docSnap.data();
+            console.log(
+              "🚀 ~ file: update-user.html:289 ~ getData ~ docData:",
+              docData
+            );
+            // Get form input values
+
+            const displayName = document.querySelector(
+              ".form-field--input[name='display-name']"
+            );
+
+            const email = document.querySelector(
+              ".form-field--input[name='email']"
+            );
+            const roles = document.querySelectorAll(
+              ".form-radio input[name='role']"
+            );
+            const statuses = document.querySelectorAll(
+              ".form-radio input[name='status']"
+            );
+
+            roles.forEach((role) => {
+              if (role.value === docData.role) {
+                role.checked = true;
+              }
+            });
+            statuses.forEach((status) => {
+              if (status.value === docData.status) {
+                status.checked = true;
+              }
+            });
+
+            // Set values
+
+            displayName.value = docData.displayName;
+            email.value = docData.email;
+          }
+        } catch (error) {
+          console.log(
+            "🚀 ~ file: index.html:276 ~ button.addEventListener ~ error:",
+            error
+          );
+        }
+      }
+      getData(postID);
+
+      // ---------------- UPADATE ---------
+      document.addEventListener("DOMContentLoaded", function () {
+        const formUpdate = document.getElementById("formUpdate");
+
+        formUpdate.addEventListener("submit", handleUpdate);
+
+        async function handleUpdate(e) {
+          e.preventDefault();
+
+          // Get form input values
+
+          const displayName = document.querySelector(
+            ".form-field--input[name='display-name']"
+          ).value;
+
+          const email = document.querySelector(
+            ".form-field--input[name='email']"
+          ).value;
+          const role = document.querySelector(
+            ".form-radio input[name='role']:checked"
+          ).value;
+          const status = document.querySelector(
+            ".form-radio input[name='status']:checked"
+          ).value;
+           // Kiểm tra nếu các trường input không được điền
+ if (!displayName || !email || !role || !status) {
+  toastr.options = { 
+        "positionClass": "toast-bottom-left",
+      }
+        toastr.error('Please fill out all fields.');
+        return; // Ngừng xử lý tiếp theo nếu có trường input trống
+    }
+          try {
+            const washingtonRef = doc(db, "users", postID);
+            await updateDoc(washingtonRef, {
+              displayName,
+              email,
+              role,
+              status,
+            });
+            toastr.options = { 
+        "positionClass": "toast-bottom-left",
+      }
+            toastr.success('Update user successfully');
+
+          } catch (error) {
+            console.log("🚀 ~ file: app.js:174 ~ handleEdit ~ error:", error);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

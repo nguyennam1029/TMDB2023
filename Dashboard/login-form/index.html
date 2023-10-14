@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,600,0,0" />
+    <title>Login Page</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+  />
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="login-card-container">
+        <div class="login-card">
+            <div class="login-card-logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/6830/6830335.png" alt="logo">
+            </div>
+            <div class="login-card-header">
+                <h1>Sign In</h1>
+                <div>Please login to use the platform</div>
+            </div>
+            <form class="login-card-form" id="login-form-admin">
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">mail</span>
+                    <input type="text" placeholder="Enter Email" id="email" 
+                    autofocus required>
+                </div>
+                <div class="form-item">
+                    <span class="form-item-icon material-symbols-rounded">lock</span>
+                    <input type="password" placeholder="Enter Password" id="password"
+                     required>
+                </div>
+                <div class="form-item-other">
+                    <div class="checkbox">
+                        <input type="checkbox" id="rememberMeCheckbox" checked>
+                        <label for="rememberMeCheckbox">Remember me</label>
+                    </div>
+                    <a href="#">I forgot my password!</a>
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+            
+        </div>
+        
+    </div>
+    <script type="module">
+      import {
+    auth,
+    signInWithEmailAndPassword,
+    getDocs,
+    collection,
+    updateDoc,
+    db,
+    doc
+    
+  } from "../../fireBaseConfig.js";
+
+
+  
+    
+      const loginForm = document.getElementById("login-form-admin");
+
+loginForm.addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    console.log("🚀 ~ file: index.html:70 ~ loginForm.addEventListener ~ password:",typeof password)
+
+    // Kiểm tra email và mật khẩu từ Firestore
+    const querySnapshot = await getDocs(collection(db, "users"));
+    let isAdmin = false;
+
+    querySnapshot.forEach((doc) => {
+        const user = doc.data();
+        console.log("🚀 ~ file: index.html:78 ~ querySnapshot.forEach ~ user:", user)
+        const userEmail = user.email;
+        const userPassword = user.pass;
+        const userRole = user.role;
+
+        // So sánh email và mật khẩu nhập vào với dữ liệu từ Firestore
+        if (userEmail === email && userPassword === password && userRole === "admin") {
+            // Kiểm tra vai trò của người dùng, nếu là "admin", đánh dấu là admin
+            if (userRole === "admin") {
+                isAdmin = true;
+            }
+        }
+    });
+
+    if (isAdmin) {
+        // Nếu là admin, chuyển hướng đến trang admin-dashboard.html
+        window.location.href = "/Dashboard/index.html";
+    } else {
+        // Nếu không phải admin hoặc không tìm thấy thông tin tương ứng, hiển thị thông báo lỗi
+        toastr.options = { 
+        "positionClass": "toast-bottom-left",
+      }
+        toastr.error('Wrong email or password');
+    }
+});
+
+    </script>
+</body>
+
+</html>

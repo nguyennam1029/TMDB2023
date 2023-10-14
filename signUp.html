@@ -443,21 +443,24 @@
           .then((userCredential) => {
             // Đăng ký thành công
             const user = userCredential.user;
+            console.log("🚀 ~ file: signUp.html:446 ~ .then ~ user:", user)
             
 
             // Lưu thông tin người dùng vào Firestore
             const userDocRef = doc(db, "users", user.uid);
             const userData = {
               email: user.email,
-              // password: user.password,
+              
               displayName: username,
-              // Thêm thông tin người dùng khác nếu cần
+              creationTime: user.metadata.creationTime,
+              role: 'user',
+              status: 'active'
             };
 
             setDoc(userDocRef, userData)
               .then(() => {
                 alert("Đăng kí thành công");
-            window.location.assign("./index.html");
+            // window.location.assign("./index.html");
                 
               })
               .catch((error) => {
