@@ -663,7 +663,10 @@ main .recent-orders a{
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
+    main {
+        overflow: hidden;
+    }
     .container{
         width: 100%;
         grid-template-columns: 1fr;
