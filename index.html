@@ -76,13 +76,24 @@
                 </li>
 
                 <li id="noti">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="noti-icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="noti-icon"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                    />
                   </svg>
                   <span>1</span>
                 </li>
 
-                <li id="info" >
+                <li id="info">
                   <a href="/" class="info-name">N</a>
                 </li>
                 <li id="signIn">
@@ -101,10 +112,20 @@
                   </a>
                 </li>
                 <li>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="signOut">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    id="signOut"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9"
+                    />
                   </svg>
-                  
                 </li>
               </ul>
             </div>
@@ -113,7 +134,7 @@
 
         <!-- === menu mobile ===  -->
         <div class="mobile-header">
-          <span class="mobile-header--icon menu">
+          <span class="mobile-header--icon menu" id="icon-menu-mobile">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -127,7 +148,7 @@
               />
             </svg>
           </span>
-          <a href="" class="mobile-header--logo">
+          <a href="/index.html" class="mobile-header--logo">
             <img src="./images/logoFooter.svg" alt="" />
           </a>
           <div class="mobile-header--right">
@@ -178,7 +199,12 @@
               placeholder="Search..."
             />
 
-            <input class="input-submit" type="button" value="Search" id="searchButton"/>
+            <input
+              class="input-submit"
+              type="button"
+              value="Search"
+              id="searchButton"
+            />
           </div>
         </div>
       </header>
@@ -502,7 +528,27 @@
 
       <!-- ============= END FOOTER =========== -->
     </div>
+    <div class="menu-rp" id="menu-rp">
+      <div class="menu-rp-item">
+        <p class="menu-rp-item--title">Movie</p>
+        <a href="/movies.html" class="menu-rp-item--link">Popular</a>
+        <a href="#" class="menu-rp-item--link">Top Rated</a>
+        <a href="#" class="menu-rp-item--link">Upcoming</a>
+        <a href="#" class="menu-rp-item--link">Now Playing</a>
+      </div>
 
+      <div class="menu-rp-item">
+        <p class="menu-rp-item--title">TV Shows</p>
+        <a href="/tvShow.html" class="menu-rp-item--link">Popular</a>
+        <a href="#" class="menu-rp-item--link">Top Rated</a>
+        <a href="#" class="menu-rp-item--link">Upcoming</a>
+        <a href="#" class="menu-rp-item--link">Now Playing</a>
+      </div>
+      <div class="menu-rp-item">
+        <p class="menu-rp-item--title">People</p>
+        <a href="/people.html" class="menu-rp-item--link">Popular people</a>
+      </div>
+    </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
       integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="

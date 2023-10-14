@@ -133,7 +133,7 @@
               />
             </svg>
           </span>
-          <a href="" class="mobile-header--logo">
+          <a href="/index.html" class="mobile-header--logo">
             <img src="./images/logoFooter.svg" alt="" />
           </a>
           <div class="mobile-header--right">
@@ -556,7 +556,27 @@
           </div>
         </div>
       </footer>
-
+      <div class="menu-rp" id="menu-rp">
+        <div class="menu-rp-item">
+          <p class="menu-rp-item--title">Movie</p>
+          <a href="/movies.html" class="menu-rp-item--link">Popular</a>
+          <a href="#" class="menu-rp-item--link">Top Rated</a>
+          <a href="#" class="menu-rp-item--link">Upcoming</a>
+          <a href="#" class="menu-rp-item--link">Now Playing</a>
+        </div>
+  
+        <div class="menu-rp-item">
+          <p class="menu-rp-item--title">TV Shows</p>
+          <a href="/tvShow.html" class="menu-rp-item--link">Popular</a>
+          <a href="#" class="menu-rp-item--link">Top Rated</a>
+          <a href="#" class="menu-rp-item--link">Upcoming</a>
+          <a href="#" class="menu-rp-item--link">Now Playing</a>
+        </div>
+        <div class="menu-rp-item">
+          <p class="menu-rp-item--title">People</p>
+          <a href="/people.html" class="menu-rp-item--link">Popular people</a>
+        </div>
+      </div>
       <!-- ============= END FOOTER =========== -->
     </div>
  
@@ -727,16 +747,17 @@ trailer])
          </div>
        </div>
        <div class="movie-detail-rp">
-         <div class="movie-detail-rp-poster">
+         <div class="movie-detail-rp-poster" style="background-image: url('https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/${detailResponse.backdrop_path}')">
            <img
-               src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3aJvYn7PBMBOYkZdD2Rc0gn1Lxd.jpg"
+           src="http://image.tmdb.org/t/p/w500//${detailResponse?.poster_path}"
+
                alt=""
              />
          </div>
          <div class="movie-detail-rp-content">
 
            <div class="poster-title">
-             <h2>Trừng Phạt</h2>
+             <h2>${detailResponse?.title || detailResponse?.name}</h2>
              <span>(2022)</span>
            </div>
 
@@ -771,48 +792,28 @@ trailer])
             </div>
              
              <span class="category poster-facts--relative">
-               Phim Hành Động, Phim Bí Ẩn, Phim Gây Cấn, Phim Hình Sự
+              ${detailResponse?.genres.map((title) => title?.name )}
              </span>
            </div>
 
            <div class="overview">
              <p class="overview-lable">Overview</p>
              <span>
-               Matt Turner (Liam Neeson) là một doanh nhân người Mỹ thành
-               đạt sống ở Berlin, đang phải cân bằng giữa sự nghiệp tài
-               chính đang bùng nổ và trách nhiệm gia đình. Một buổi sáng
-               đang lái xe đưa con đến trường, Matt nhận được một cuộc điện
-               thoại từ một giọng nói bí ẩn: có một quả bom dưới ghế của
-               anh ấy sẽ phát nổ trừ khi anh ấy hoàn thành một loạt nhiệm
-               vụ cụ thể, và nhanh chóng. Bị mắc kẹt trong một cuộc rượt
-               đuổi tốc độ cao khắp thành phố, Matt phải làm theo chỉ dẫn
-               ngày càng nguy hiểm của “kẻ lạ mặt” trong cuộc chạy đua với
-               thời gian để bảo vệ gia đình và tìm lời giải đáp cho những
-               bí ẩn đang diễn ra. Bộ phim ly kỳ về chiếc đồng hồ tích tắc
-               nhập vai này của các nhà sản xuất phim NON-STOP và THE
-               COMMUTER thu hút khán giả tham gia vào một hành trình cứu
-               chuộc và trả thù có chỉ số octan cao.
+              ${detailResponse?.overview}
+
              </span>
            </div>
 
            <div class="people-poster">
-             <div class="people-poster--profile">
-               <a href="/person/41671-nimrod-antal">Nimród Antal</a>
-               <p class="character">Director</p>
-             </div>
-             <div class="people-poster--profile">
-               <a href="/person/41671-nimrod-antal">Nimród Antal</a>
-               <p class="character">Director</p>
-             </div>
-             <div class="people-poster--profile">
-               <a href="/person/41671-nimrod-antal">Nimród Antal</a>
-               <p class="character">Director</p>
-             </div>
-             <div class="people-poster--profile">
-               <a href="/person/41671-nimrod-antal">Nimród Antal</a>
-               <p class="character">Director</p>
-             </div>
-           </div>
+                ${castResponse.cast.slice(0, 4).map(item => `
+                  <div class="people-poster--profile">
+                   <a href="/person/41671-nimrod-antal">${item?.name}</a>
+                   <p class="character">${item?.character}</p>
+                 </div>
+  `).join('')}
+                 
+                
+               </div>
          </div>
        </div>`
          

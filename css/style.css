@@ -747,6 +747,26 @@ nav {
 .mobile-header {
   display: none;
 }
+
+.menu-rp {
+  position: fixed;
+  top: 80px;
+  left: -100%;
+
+  bottom: 0;
+  width: 80%;
+  z-index: 999;
+  background-color: #1c3a54;
+  padding: 20px;
+  color: #f1f1f1;
+  display: none;
+        animation: showMenu 0.4s ease forwards;
+}
+@keyframes showMenu {
+  to{
+   left: 0;
+  } 
+}
 /* =============== START RESPONSIVE ================ */
 
 /* ========== TABLET ========= */
@@ -788,7 +808,21 @@ nav {
     padding: 30px;
   }
 }
-
+@media screen and (max-width: 780px) {
+  .menu-rp {
+     
+  }
+  .menu-rp-item--title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .menu-rp-item--link {
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 10px;
+  }
+}
 /* =========== MOBILE ========== */
 @media (max-width: 540px) {
   nav {

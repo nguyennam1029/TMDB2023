@@ -149,3 +149,21 @@ const getPopular = async () => {
   }
 };
 getPopular();
+
+
+
+// =================== toggle menu ============= 
+const iconMenu = document.getElementById('icon-menu-mobile')
+const menuRp = document.getElementById('menu-rp')
+
+iconMenu.addEventListener('click', function() {
+  // Kiểm tra xem menu đang hiển thị hay không
+  const isMenuVisible = menuRp.style.display === 'block' || getComputedStyle(menuRp).display === 'block';
+
+  // Nếu menu đang hiển thị, ẩn nó đi; nếu không, hiển thị menu
+  if (isMenuVisible) {
+    menuRp.style.display = 'none';
+  } else {
+    menuRp.style.display = 'block';
+  }
+});

@@ -664,6 +664,7 @@ main .recent-orders a{
 }
 
 @media screen and (max-width: 780px) {
+    
     main {
         overflow: hidden;
     }
