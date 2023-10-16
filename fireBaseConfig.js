@@ -21,7 +21,9 @@ import {
   onAuthStateChanged,
   signOut,
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-
+import {
+  getStorage, ref, uploadBytesResumable, getDownloadURL
+} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js";
 const firebaseConfig = {
   apiKey: "AIzaSyCOJswyiVwfeKMjQwxraFxgO2za87SRfdY",
   authDomain: "tmdb-6bdda.firebaseapp.com",
@@ -34,7 +36,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth();
-
+const storage = getStorage();
 export {
   auth,
   db,
@@ -52,4 +54,5 @@ export {
   updateDoc,
   onSnapshot,
   serverTimestamp,
+  storage, ref, uploadBytesResumable, getDownloadURL
 };

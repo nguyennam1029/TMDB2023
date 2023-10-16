@@ -10,6 +10,9 @@
     font-size: 16px;
     margin-top: 40px;
 }
+.form-field.span-2 {
+  grid-column: span 2;
+}
 .form-field--input {
   display: block;
   border-radius: 12px;
@@ -28,6 +31,12 @@ margin-top: 10px;
 padding: 8px;
 border-radius: 12px;
 justify-content: center;
+
+}
+.form-radio.movie {
+  gap: 22px;
+}
+.form-image {
 
 }
 .form-radio > div {
@@ -50,8 +59,119 @@ justify-content: center;
     width: 200px;
 padding: 10px;
   margin: 0 auto;
+  margin-bottom: 30px;
 }
+  .form-field-overview {
+    grid-column: span 2;
+    margin-top: 14px;
+  }
+.form-field > textarea {
+  font-family: inherit;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #9FA6B2;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  resize: none;
+}
+.form-field--file {
   
+  border-radius: 12px;
+  border: 1px solid #9FA6B2;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  align-items: center;
+  position: relative;
+}
+.fileUpload {
+	background: #00bcbe;
+  cursor: pointer;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	
+	overflow: hidden;
+	padding: 0.875em;/*14px/16px*/
+	position: relative;
+	text-align: center;
+	width: 120px;
+   cursor: pointer;
+}
+.fileUpload:hover, .fileUpload:active, .fileUpload:focus {
+	background: #00a2a4;
+  cursor: pointer;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 148px;
+    height: 46px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+    position: fixed;
+    right: 100%;
+    bottom: 100%;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.progressBar {
+  opacity: 0;
+  transition: all 0.25s;
+  position: absolute;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 900;
+    color: #f1f1f1;
+  background: #00bcbe;
+  border: 1px solid #ccc;
+  height: 18px;
+  width: 0;
+  left: 0;
+  bottom: -22px;
+  border-radius: 12px;
+}
+.imagePoster {
+  display: none;
+  height: 100%;
+  width: 33%;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 6px;
+}
+.imagePoster > img {
+  width: 100%;
+  display: none;
+  border-radius: 6px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+#imagePoster-wrap2 {
+  width: 94%;
+  height: fit-content;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
 @media screen and  (max-width: 780px) {
   .form-add-user {
     display: flex;

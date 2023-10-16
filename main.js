@@ -1,8 +1,16 @@
+
+
+
+
+
 const apiKey = "ef138d2e438f48c0910e6806f5b0fce1";
 const apiTrending = `https://api.themoviedb.org/3/trending/all/day?api_key=${apiKey}`;
 const apiPopular = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
-import { auth, onAuthStateChanged, signOut } from "./fireBaseConfig.js";
+import { auth, onAuthStateChanged, signOut,getDocs,
+  collection,
+  db,
+  doc } from "./fireBaseConfig.js";
 onAuthStateChanged(auth, (user) => {
   // Lấy các phần tử theo ID
   const notiElement = document.getElementById("noti");
@@ -48,7 +56,7 @@ const searchButton = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
 
 // Xử lý sự kiện khi nút tìm kiếm được bấm
-searchButton.addEventListener("click", function() {
+searchButton?.addEventListener("click", function() {
   // Lấy giá trị từ khóa từ ô input
   const keyword = searchInput.value;
   const encodedQuery = encodeURIComponent(keyword).replace(/%20/g, '+');
@@ -98,7 +106,8 @@ const getTrendings = async () => {
           <div class="product-content">
             <h4 class="product-title">${item?.name || item?.title}</h4>
             <span class="product-time">${
-              item?.first_air_date || item?.release_date
+              moment( item?.first_air_date || item?.release_date).format('DD-MM-YYYY')
+
             }</span>
           </div>
         </a>`
@@ -118,7 +127,7 @@ const getPopular = async () => {
     const res = await axios.get(apiPopular);
 
     const listProduct = res.data.results;
-    console.log("🚀 ~ file: main.js:100 ~ getPopular ~ listProduct:", listProduct)
+   
 
     const productTemplates = listProduct
       .map(
@@ -136,7 +145,8 @@ const getPopular = async () => {
             <div class="product-content">
               <h4 class="product-title">${item?.name || item?.title}</h4>
               <span class="product-time">${
-                item?.first_air_date || item?.release_date
+                moment( item?.first_air_date || item?.release_date).format('DD-MM-YYYY')
+               
               }</span>
             </div>
           </a>`
@@ -156,7 +166,7 @@ getPopular();
 const iconMenu = document.getElementById('icon-menu-mobile')
 const menuRp = document.getElementById('menu-rp')
 
-iconMenu.addEventListener('click', function() {
+iconMenu?.addEventListener('click', function() {
   // Kiểm tra xem menu đang hiển thị hay không
   const isMenuVisible = menuRp.style.display === 'block' || getComputedStyle(menuRp).display === 'block';
 
@@ -166,4 +176,50 @@ iconMenu.addEventListener('click', function() {
   } else {
     menuRp.style.display = 'block';
   }
+});
+
+
+
+
+// ------------------- GET MY MOVIES ================= 
+
+
+function createProductCard(item) {
+  const template = `
+  <a href="${
+      `./detail-my-movie.html?id=${item.id}`
+      
+  }" class="item-product">
+
+  <div class="product-item--img">
+    <img
+      src="${item?.posterImageUrl}"
+      alt=""
+    />
+    <div class="percent">
+      <span class="percent-title"> 89<sup>%</sup> </span>
+    </div>
+  </div>
+  <div class="product-content">
+    <h4 class="product-title">${ item?.title}</h4>
+    <span class="product-time">${moment.unix(item.timestamp.seconds).format('DD-MM-YYYY')}</span>
+  </div>
+</a>
+  `;
+
+  return template;
+}
+
+const productsContainer = document.getElementById("my-movies");
+const querySnapshot = await getDocs(collection(db, "movies"));
+
+querySnapshot.forEach((doc) => {
+  const productData = doc.data();
+  const productId = doc.id;
+
+  // Combine doc.id and doc.data() into a single object
+  const productInfo = { id: productId, ...productData };
+  const productCard = createProductCard(productInfo);
+
+  productsContainer.insertAdjacentHTML("beforeend", productCard);
 });
