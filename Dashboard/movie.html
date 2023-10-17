@@ -8,16 +8,16 @@
       rel="stylesheet"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
-  />
-  <script
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous"
-  ></script>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Responsive Dashboard Design #1 | AsmrProg</title>
   </head>
@@ -46,11 +46,9 @@
             <h3>Users</h3>
           </a>
           <a href="/Dashboard/movie.html">
-            <span class="material-icons-sharp">
-                movie
-            </span>
+            <span class="material-icons-sharp"> movie </span>
             <h3>Movie</h3>
-        </a>
+          </a>
 
           <a href="#">
             <span class="material-icons-sharp"> mail_outline </span>
@@ -81,36 +79,31 @@
       <!-- Main Content -->
       <main>
         <div>
-            <h1>Movie</h1>
-            <!-- Recent Orders Table -->
-            <a href="/Dashboard/add-new-movie.html" class="notification add-user">
-                
-                    <span class="material-icons-sharp">
-                        add
-                    </span>
-                    <h3>Add Movie</h3>
-               
-            </a>
+          <h1>Movie</h1>
+          <!-- Recent Orders Table -->
+          <a href="/Dashboard/add-new-movie.html" class="notification add-user">
+            <span class="material-icons-sharp"> add </span>
+            <h3>Add Movie</h3>
+          </a>
         </div>
-       
+
         <div class="recent-orders list-user">
           <table>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Status</th>
+                <th>Title</th>
+                <th>Genres</th>
+                <th>Overview</th>
                 <th>Time</th>
+                <th>Poster</th>
+                <th>Background Poster</th>
                 <th>Action</th>
               </tr>
             </thead>
-            <tbody id="content-users">
-             
+            <tbody id="content-movies">
              
             </tbody>
           </table>
-         
         </div>
         <!-- End of Recent Orders -->
       </main>
@@ -190,14 +183,13 @@
     </div>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script src="https://cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script>
-    
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
-    integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-    <script src="index.js" type="module"></script>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
+      integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

@@ -606,7 +606,45 @@ main .recent-orders a{
     align-items: center;
     gap: 0.6rem;
 }
+.movie-wrap-img {
+    height: 210px;
+    overflow: hidden;
+    /* width: 80%; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.movie-wrap-img > img {
+    width: 60%;
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
+}
+.movie-bg-poster {
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+}
+.wrap-icon-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.movie-action--icon {
+    width: 24px;
+    height: 24px;
+}
+.content-movie-span {
+    display: -webkit-box;
+    line-height: 1;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
 @media screen and (max-width: 1200px) {
     .container{
         width: 95%;
