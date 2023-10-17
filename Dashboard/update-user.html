@@ -280,10 +280,7 @@
           const docSnap = await getDoc(docRef);
           if (docSnap.exists()) {
             const docData = docSnap.data();
-            console.log(
-              "🚀 ~ file: update-user.html:289 ~ getData ~ docData:",
-              docData
-            );
+            
             // Get form input values
 
             const displayName = document.querySelector(

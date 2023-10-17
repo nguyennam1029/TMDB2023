@@ -168,8 +168,8 @@ function templateMovie(item) {
       viewBox="0 0 24 24"
       stroke-width="1.5"
       stroke="currentColor"
-      class="trash delete-button"
-      ${item?.id}
+      class="trash delete-button-movie"
+      data-movie-id=${item?.id}
     >
     <path
     stroke-linecap="round"
@@ -179,7 +179,7 @@ function templateMovie(item) {
     </svg>`;
   
   const editLink = `
-    <a href="/Dashboard/update-movie.html" style="width: 25px; height: 25px; margin: 0;">
+    <a href="/Dashboard/update-movie.html?id=${item.id}" style="width: 25px; height: 25px; margin: 0;">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -210,14 +210,7 @@ function templateMovie(item) {
     <td><span class="content-movie-span">${item?.overview}</span></td>
     <td >${moment( item?.first_air_date || item?.release_date).format('DD-MM-YYYY')}</td>
    
-                <td>
-                  <div class="movie-wrap-img">
-                    <img
-                      src="${item?.posterImageUrl}"
-                      alt=""
-                    />
-                  </div>
-                </td>
+               
                 <td>
                 <div >
                   <img
@@ -227,6 +220,14 @@ function templateMovie(item) {
                   />
                 </div>
               </td>
+              <td>
+              <div class="movie-wrap-img">
+                <img
+                  src="${item?.posterImageUrl}"
+                  alt=""
+                />
+              </div>
+            </td>
     <td class="action">
     ${deleteButton}
     ${editLink}
@@ -250,7 +251,48 @@ querySnapshotMovies.forEach((doc) => {
   wrapMovies.insertAdjacentHTML("beforeend", productCard);
 });
 
+  // ===================== DELETE USER ================= 
+  
+  const deleteButtonMovies = document.querySelectorAll(".delete-button-movie");
 
+  deleteButtonMovies.forEach((button) => {
+    button.addEventListener("click", async () => {
+      const id = button.dataset.movieId;
+      if(!id) {
+        toastr.options = { 
+          "positionClass": "toast-bottom-left",
+        }
+        toastr.warning('you have no rights');
+        return;
+      }
+      try {
+        toastr.options = { 
+          "positionClass": "toast-bottom-left",
+        }
+       // Hiển thị cảnh báo xác nhận
+       const userConfirmed = confirm("Are you sure you want to delete ?");
+       if (!userConfirmed) {
+        toastr.info('Cancelled');
+           return; // Nếu người dùng không xác nhận, dừng thực hiện tiếp
+       }
+  
+  
+        await deleteDoc(doc(db, "movies", id));
+       
+        toastr.success('Movie deleted successfully');
+              setTimeout(() => {
+                  window.location.assign("/Dashboard/movie.html");
+              }, 1600);
+      } catch (error) {
+        console.log(
+          "🚀 ~ file: index.html:276 ~ button.addEventListener ~ error:",
+          error
+        );
+      }
+      // await handleDelete(id);
+    });
+  });
+  
 
 
 

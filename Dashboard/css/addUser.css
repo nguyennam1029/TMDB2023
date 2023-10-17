@@ -88,6 +88,9 @@ padding: 10px;
   align-items: center;
   position: relative;
 }
+.form-field--file:hover .imagePoster-trash-icon {
+  opacity: 1;
+}
 .fileUpload {
 	background: #00bcbe;
   cursor: pointer;
@@ -152,6 +155,38 @@ input[type="file"] {
   left: 0;
   bottom: -22px;
   border-radius: 12px;
+}
+.imagePoster-relative {
+  position: relative;
+}
+.imagePoster-trash-icon {
+  position: absolute;
+  top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.4);
+  border-radius: 12px;
+overflow: hidden;
+opacity: 0;
+transition: all 0.2s;
+}
+.imagePoster-trash-icon > span {
+  color: #FF0060;
+  display: block;
+  padding: 10px;
+  border-radius: 100rem;
+  background-color: #ccc;
+  transition: font-size 0.3s ease;
+  font-size: 22px;
+  cursor: pointer;
+}
+.imagePoster-trash-icon > span:hover {
+  font-size: 26px;
+
 }
 .imagePoster {
   display: none;
