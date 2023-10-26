@@ -474,23 +474,27 @@
         createUserWithEmailAndPassword,
         db,
         doc,
-        setDoc,
+        serverTimestamp,
+        addDoc,
+        collection,
       } from "./fireBaseConfig.js";
 
       // Lấy đối tượng form và các trường input
       const signUpForm = document.getElementById("signUpForm");
+
       const usernameInput = document.getElementById("username");
       const emailInput = document.getElementById("email");
       const passwordInput = document.getElementById("password");
 
       // Gán sự kiện submit cho form
-      signUpForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Ngừng chuyển hướng trang sau khi nhấn nút submit
+      signUpForm.addEventListener("submit", function (e) {
+        e.preventDefault(); // Ngừng chuyển hướng trang sau khi nhấn nút submit
 
         // Lấy giá trị từ các trường input
         const username = usernameInput.value;
         const email = emailInput.value;
         const password = passwordInput.value;
+
         // Kiểm tra nếu các trường input không được điền
         if (!username || !email || !password) {
           toastr.options = {
@@ -499,31 +503,31 @@
           toastr.warning("Please fill out all fields.");
           return; // Ngừng xử lý tiếp theo nếu có trường input trống
         }
+
         createUserWithEmailAndPassword(auth, email, password)
           .then((userCredential) => {
+            
             // Đăng ký thành công
             const user = userCredential.user;
-            console.log("🚀 ~ file: signUp.html:446 ~ .then ~ user:", user);
-
-            // Lưu thông tin người dùng vào Firestore
-            const userDocRef = doc(db, "users", user.uid);
-            const userData = {
-              email: user.email,
-
-              displayName: username,
-              creationTime: user.metadata.creationTime,
-              role: "user",
-              status: "active",
-            };
-
-            setDoc(userDocRef, userData)
-              .then(() => {
+            console.log("🚀 ~ file: signUp.html:512 ~ .then ~ user:", user)
+            async function handleAddUser(user) {
+              try {
+                const docRef = await addDoc(collection(db, "users"), {
+                  email: user.email,
+                  displayName: username,
+                  creationTime: user.metadata.creationTime,
+                  role: "user",
+                  status: "active",
+                });
+                console.log("Document written with ID: ", docRef.id);
                 alert("Đăng kí thành công");
                 window.location.assign("./index.html");
-              })
-              .catch((error) => {
-                console.error("Error saving user data:", error);
-              });
+              } catch (e) {
+                console.error("Error adding document: ", e);
+              }
+            }
+            handleAddUser(user);
+          
           })
           .catch((error) => {
             // Đăng ký thất bại
@@ -543,6 +547,9 @@
             }
           });
       });
+    
+    
+    
     </script>
     <script src="./main.js" type="module"></script>
   </body>

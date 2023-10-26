@@ -77,18 +77,12 @@ const getTrendings = async () => {
     const res = await axios.get(apiTrending);
 
     const listProduct = res.data.results;
-    console.log(
-      "🚀 ~ file: main.js:11 ~ getTrendings ~ listProduct:",
-      listProduct
-    );
-
+   
     const productTemplates = listProduct
       .map(
         (item) =>
           `  
-      
-          
-          <a href="${
+           <a href="${
             item.media_type === "movie"
               ? `./detail-movie.html?id=${item.id}`
               : `./detail-tv.html?id=${item.id}`
@@ -127,6 +121,7 @@ const getPopular = async () => {
     const res = await axios.get(apiPopular);
 
     const listProduct = res.data.results;
+    console.log("🚀 ~ file: main.js:130 ~ getPopular ~ listProduct:", listProduct)
    
 
     const productTemplates = listProduct
